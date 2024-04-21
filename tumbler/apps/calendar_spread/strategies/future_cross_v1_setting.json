@@ -1,0 +1,35 @@
+{
+    "fc_v1_btc_usdt": {
+        "class_name": "FutureCrossV1Strategy",
+        "setting": {
+            "vt_symbols_subscribe": [
+                "btc_usdt.BITMEX",
+                "btc_usdt.OKEXS"
+            ],
+            "target_exchange_info": {
+                "vt_symbol": "bsv_usd_191220.OKEXS",
+                "symbol": "bsv_usd_191220",
+                "exchange": "BITMEX",
+                "price_tick": 0.5,
+                "volume_tick": 1,
+                "contract_size": 1,
+                "multiplier":100,
+                "delivery": "2019-12-06",
+                "account_key": "BITMEX.XBT"
+            },
+            "base_exchange_info": {
+                "vt_symbol": "bsv_usd_200327.OKEXS",
+                "symbol": "bsv_usd_200327",
+                "exchange": "OKEXS",
+                "price_tick": 0.01,
+                "volume_tick": 1,
+                "contract_size": 100,
+                "multiplier":1,
+                "account_key": "OKEXS.btc"
+            },
+            "target_spread":0.1,
+            "profit_spread":0.05,
+            "fixed_size":1
+        }
+    }
+}

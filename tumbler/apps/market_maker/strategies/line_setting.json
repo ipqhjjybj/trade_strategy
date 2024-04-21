@@ -1,0 +1,13 @@
+{
+	"line_btc_usdt_okex":{
+		"class_name": "LineStrategy",
+		"setting":{
+			"symbol_pair": "btc_usdt",
+            "vt_symbols_subscribe": [
+                "btc_usdt.OKEX"
+            ],
+			"line_rate":30,
+            "cut_rate":10
+		}
+	}
+}

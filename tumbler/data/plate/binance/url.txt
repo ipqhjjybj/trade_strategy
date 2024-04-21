@@ -1,0 +1,9 @@
+
+产品页面
+https://www.binance.com/bapi/asset/v2/public/asset-service/product/get-products?includeEtf=true
+
+资产页面
+https://www.binance.com/bapi/asset/v2/public/asset/asset/get-all-asset
+
+交易品种
+https://www.binance.com/bapi/composite/v1/public/marketing/symbol/list

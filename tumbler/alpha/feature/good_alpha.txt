@@ -1,0 +1,5 @@
+MA
+NATR
+ROC
+MOM
+boll_lower

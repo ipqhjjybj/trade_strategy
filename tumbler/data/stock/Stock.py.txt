@@ -1,0 +1,784 @@
+# coding:utf-8
+import socket
+import threading
+import time
+import os
+import sys
+import datetime
+import cx_Oracle
+import chardet
+import random
+import pandas as pd
+import numpy as np
+import tushare as ts
+import gzip
+import random
+import socket
+import urllib2
+import cookielib
+import StringIO
+from config import *
+from connect import *
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
+
+ERROR = {
+    '0': 'Can not open the url,checck you net',
+    '1': 'Creat download dir error',
+    '2': 'The image links is empty',
+    '3': 'Download faild',
+    '4': 'Build soup error,the html is empty',
+    '5': 'Can not save the image to your disk',
+}
+
+
+class BrowserBase(object):
+
+    def __init__(self):
+        socket.setdefaulttimeout(20)
+
+    @staticmethod
+    def speak(name, content):
+        print
+        '[%s]%s' % (name, content)
+
+    def openurl(self, url):
+        """
+        打开网页
+        """
+        cookie_support = urllib2.HTTPCookieProcessor(cookielib.CookieJar())
+        self.opener = urllib2.build_opener(cookie_support, urllib2.HTTPHandler)
+        urllib2.install_opener(self.opener)
+        user_agents = [
+            'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11',
+            'Opera/9.25 (Windows NT 5.1; U; en)',
+            'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)',
+            'Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.5 (like Gecko) (Kubuntu)',
+            'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.12) Gecko/20070731 Ubuntu/dapper-security Firefox/1.5.0.12',
+            'Lynx/2.8.5rel.1 libwww-FM/2.14 SSL-MM/1.4.1 GNUTLS/1.2.9',
+            "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.7 (KHTML, like Gecko) Ubuntu/11.04 Chromium/16.0.912.77 Chrome/16.0.912.77 Safari/535.7",
+            "Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0 ",
+
+        ]
+
+        agent = random.choice(user_agents)
+        self.opener.addheaders = [("User-agent", agent), ("Accept", "*/*"), ('Referer', 'http://www.google.com')]
+        try:
+            res = self.opener.open(url)
+            return res.read()
+        except Exception, e:
+            # BrowserBase.speak(str(e),url)
+            # return self.openurl(url)
+            return ""
+        return ''
+
+
+'''
+HTML 信息类
+'''
+
+
+class HTML():
+    @staticmethod
+    def browser_html(url):
+        splider = BrowserBase()
+        return splider.openurl(url)
+
+    @staticmethod
+    def get_html(url, data={}):
+        try:
+            # print "try request"
+            request = urllib2.Request(url)
+            request.add_header('User-Agent',
+                               'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36')
+            request.add_header('Connection', "keep-alive")
+            request.add_header('Cache-Control', "")
+            request.add_header("Accept-Encoding", "gzip, deflate, sdch")
+            request.add_header("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8")
+            request.add_header("Upgrade-Insecure-Requests", "1")
+            for key in data.keys():
+                request.add_header(key, data[key])
+            # print "try response"
+            response = urllib2.urlopen(request, timeout=10)
+            html = ""
+            if response.info().get('Content-Encoding') == 'gzip':
+                # print "try gzip read"
+                buf = StringIO.StringIO(response.read())
+                f = gzip.GzipFile(fileobj=buf)
+                html = f.read()
+            else:
+                # print "try read"
+                opener = urllib2.build_opener()
+                html = opener.open(request).read()
+            # print "finish"
+            try:
+                html = html.decode('utf-8')
+            except Exception, ex:
+                try:
+                    html = html.decode('gbk')
+                except Exception, ex:
+                    pass
+            return html
+        except Exception, ex:
+            print
+            "Error in Spider.get_html"
+            print
+            ex
+            if "IncompletedRead" in ex:
+                print
+                "try again spider"
+                return HTML.get_html(url)
+            if "HTTP Error 500" in str(ex):
+                print
+                "try again spider"
+                return HTML.get_html(url)
+            if "timed out" in ex:
+                print
+                "try again spider"
+                return HTML.get_html(url)
+
+
+'''
+数学公式类
+'''
+
+
+class MathFormula():
+    '''
+    通过 现在价格now_price,今天开始价格 init_val,昨天收盘后复权价格 rbcp ,获得实时的后复权价格
+    '''
+
+    @staticmethod
+    def getRealtimeRehabilitaion(now_price, init_val, rbcp):
+        return (float(now_price) - float(init_val)) * float(rbcp) / float(init_val) + float(rbcp)
+
+    '''
+    通过 当前价格 trade, 以及它的涨幅changepercent 来计算出initValue
+    '''
+
+    @staticmethod
+    def getInitValue(trade, changepercent):
+        init_val = float(trade) / (1 + float(changepercent))
+
+    '''
+    通过某天的前复权收盘价跟后复权收盘价,将现在的价格转化为实时的后复权价格
+    '''
+
+    @staticmethod
+    def getNowAfterPrice(beforeNowPrice, beforeClose, afterClose):
+        return (float(beforeNowPrice) - float(beforeClose)) * float(afterClose) / float(beforeClose) + float(afterClose)
+
+
+'''
+比较强大的股票类
+'''
+
+
+class Stock():
+    num_beforeToAfterInitValueDic = 0
+    beforeToAfterInitValueDic = {}  # P_after =  (P_bef - init)/init * P_after_yesterday_close + P_after_yesterday_close 中的init的数据
+    yesterday_afterRehabilitationClosePrice = {}  # 昨日复盘价的集合,从数据库中拿出
+    flag_yesterday_afterRehabilitationClosePrice = False  # 标记是否从数据库拿过
+    beforeRehabilitationToAfterRehabilitaion = {}  # 还没做
+    flagBeforeRehabilitationToAfterRehabilitaion = False  # 标记 没做
+
+    trade_date_list = []  # 取得 trade_date_list
+    flag_trade_date = False  # 标记 trade_date_list是否取到
+
+    tushare_realtime_flag = False
+    tushareRealTimeAllData = pd.Series([])
+
+    oracle100 = False
+    oracle101 = False
+    mysql_use = False
+    day_afterRehabilitationOpenPrice = {}  # {"date"=>{"code"=>price}}
+    day_afterRehabilitationClosePrice = {}  # {"date"=>{"code"=>price}}
+    day_beforeRehabilitationClosePrice = {}  # {"date"=>{"code"=>price}}
+    day_beforeRehabilitationOpenPrice = {}  # {"date"=>{"code"=>price}}
+    day_beforeRehabilitationAMTPrice = {}  # {"date"=>{"code"=>AMT}}
+    day_floatStock = {}  # {"date"=>{"code"=>流通股本 }} 单位 / 股,    就是每个股票每天的股本
+
+    '''
+    通过编号获得哪个数据库的连接
+    100 --> oracle100
+    101 --> oracle101
+    '''
+
+    @staticmethod
+    def getDB(name):
+        if name == "100":
+            if Stock.oracle100 == False:
+                while True:
+                    try:
+                        Stock.oracle100 = Connect_Oracle(hosts=ORACLE_DB_HOST_ANALYSE)
+                        print
+                        "connect to oracle successily!"
+                        break
+                    except Exception, ex:
+                        if "ORA-12170" in str(ex):
+                            print
+                            "try again!"
+                            continue
+                        else:
+                            print
+                            ex
+                            break
+            return Stock.oracle100
+        if name == "101":
+            if Stock.oracle101 == False:
+                while True:
+                    try:
+                        Stock.oracle101 = Connect_Oracle()
+                        print
+                        "connect to oracle successily!"
+                        break
+                    except Exception, ex:
+                        if "ORA-12170" in str(ex):
+                            print
+                            "try again!"
+                            continue
+                        else:
+                            print
+                            ex
+                            break
+            return Stock.oracle101
+        if name == "mysql":
+            if Stock.mysql_use == False:
+                while True:
+                    try:
+                        Stock.mysql_use = Connect_Mysql()
+                        print
+                        "connect to mysql successily"
+                        break
+                    except Exception, ex:
+                        print
+                        ex
+            return Stock.mysql_use
+        return False
+
+    '''
+    关闭数据库连接
+    '''
+
+    @staticmethod
+    def close():
+        if Stock.oracle100 != False:
+            Stock.oracle100.close()
+            Stock.oracle100 = False
+        if Stock.oracle101 != False:
+            Stock.oracle101.close()
+            Stock.oracle101 = False
+        if Stock.mysql_use != False:
+            Stock.mysql_use.close()
+            Stock.mysql_use = False
+
+    '''
+    把 2002这种数字转成  002002
+    '''
+
+    @staticmethod
+    def norm_code(code):
+        code = str(code)
+        l = 6 - len(code)
+        return '0' * l + code
+
+    '''
+    把股票变成标准的股票
+    '''
+
+    @staticmethod
+    def makeCode(code):
+        return code[0:6] + "." + (Stock.get_market(code[0:6])).upper()
+
+    '''
+    判断这个stock_code是不是A股
+    '''
+
+    @staticmethod
+    def check(stock_code):
+        try:
+            make_code = stock_code[0:6] + "." + (Stock.get_market(stock_code[0:6])).upper()
+            if make_code == stock_code:
+                return True
+            else:
+                return False
+        except Exception, ex:
+            print
+            ex
+
+    '''
+    300104这样的,返回 sz , 00开头的sz,60,sh
+    获得某个股票的 市场编号
+    '''
+
+    @staticmethod
+    def get_market(code):
+        code = Stock.norm_code(code)
+        if len(code) == 6:
+            if code[:2] == "60":
+                return "sh"
+            if code[:2] == "00" or code[:2] == "30":
+                return "sz"
+            if code[:2] == "90":
+                return "sh"
+            if code[:2] == "20":
+                return "sz"
+        return "unknown"
+
+    @staticmethod
+    def getG14WhickStockOnDay(code, date):
+        try:
+            # ssql = "select TRADEDATE from (select TRADEDATE from trade_tradedate where TRADEDATE < '%s' order by TRADEDATE DESC) where rownum = 1"
+            ssql = "select G14 from (select G14 from G where G01='%s' and G00 <= '%s' order by G00 DESC) where rownum = 1" % (
+            code, date)
+            # print ssql
+            db = Stock.getDB("100")
+            db.execute(ssql)
+            rs = db.fetchall()
+            if len(rs) > 0:
+                return rs[0][0]
+            else:
+                return 0.0
+        except Exception, ex:
+            return 0.0
+
+    @staticmethod
+    def getG12WhickStockOnDay(code, date):
+        try:
+            # ssql = "select TRADEDATE from (select TRADEDATE from trade_tradedate where TRADEDATE < '%s' order by TRADEDATE DESC) where rownum = 1"
+            ssql = "select G12 from (select G12 from G where G01='%s' and G00 <= '%s' order by G00 DESC) where rownum = 1" % (
+            code, date)
+            # print ssql
+            db = Stock.getDB("100")
+            db.execute(ssql)
+            rs = db.fetchall()
+            if len(rs) > 0:
+                return rs[0][0]
+            else:
+                return 0.0
+        except Exception, ex:
+            return 0.0
+
+    '''
+    从Tushare获得当前所有股票的实时行情数据
+    '''
+
+    @staticmethod
+    def getAllStockRealTimeFromTushare(reload=False):
+        if tushare_realtime_flag == False or reload == True:
+            Stock.tushareRealTimeAllData = ts.get_today_all()
+            Stock.tushare_realtime_flag = True
+        return Stock.tushareRealTimeAllData
+
+    '''
+    通过处理Tushare获得的数据，来搞
+    返回 Stock.beforeToAfterInitValueDic
+    '''
+
+    @staticmethod
+    def getTushareInitValue():
+        if Stock.num_beforeToAfterInitValueDic < 20:
+            datas = Stock.getAllStockRealTimeFromTushare()
+            codes = datas["code"]  # 000016这些
+            changePercents = datas["changepercent"]  # 现在的涨幅
+            trades = datas["trade"]  # 现价
+            indeies = codes.index
+            Stock.num_beforeToAfterInitValueDic = 0
+            Stock.beforeToAfterInitValueDic = {}
+            for index in indeies:
+                code = codes[index]
+                changepercent = changePercents[index]
+                trade = trades[index]
+                init_val = MathFormula.getInitValue(trade, changepercent)
+                Stock.beforeToAfterInitValueDic[code] = init_val
+                Stock.num_beforeToAfterInitValueDic += 1
+        return Stock.beforeToAfterInitValueDic
+
+    '''
+    获得交易日数组
+    '''
+
+    @staticmethod
+    def getTradeDayList(reload=False):
+        if Stock.flag_trade_date == False or reload == True:
+            ret = []
+            db = Stock.getDB("101")
+            db.execute("select TRADEDATE from trade_tradedate@db2_100 order by TRADEDATE asc")
+            rs = db.fetchall()
+            for (TRADEDATE) in rs:
+                ret.append(TRADEDATE[0])
+            Stock.trade_date_list = ret
+            Stock.flag_trade_date = True
+        return Stock.trade_date_list
+
+    '''
+    获得某个日期前的交易日，如果这个日期是交易日，则返回这个日期,以及它的序号
+    '''
+
+    @staticmethod
+    def theTradeDayBeforeThatDay(date):
+        date_list = Stock.getTradeDayList()
+        n1 = -1
+        while True:
+            try:
+                n1 = date_list.index(date)
+                break
+            except Exception, ex:
+                t1 = datetime.datetime.strptime(date, "%Y-%m-%d")
+                t1 = t1 - datetime.timedelta(days=1)
+                date = t1.strftime("%Y-%m-%d")
+        return (date_list[n1], n1)
+
+    '''
+    获得某个日期后的交易日，如果这个日期是交易日，则返回这个日期,以及它的序号
+    '''
+
+    @staticmethod
+    def theTradeDayAfterThatDay(date):
+        date_list = Stock.getTradeDayList()
+        n2 = -1
+        while True:
+            try:
+                n2 = date_list.index(date)
+                break
+            except Exception, ex:
+                t2 = datetime.datetime.strptime(date, "%Y-%m-%d")
+                t2 = t2 + datetime.timedelta(days=1)
+                date = t2.strftime("%Y-%m-%d")
+        return (date_list[n2], n2)
+
+    '''
+    获得上一个交易日的日期
+    '''
+
+    @staticmethod
+    def getLastTradeDay():
+        db = Stock.getDB("100")
+        db.execute(
+            "select TRADEDATE from trade_tradedate where TRADEDATE < '%s' and  rownum <= '1' order by TRADEDATE DESC " % (
+                yesterday))
+        rs = self.oracle100.fetchall()
+        if len(rs) > 0:
+            return rs[0][0]
+        else:
+            print
+            "Error no yesterday : " + str(yesterday)
+            return False
+
+    '''
+    从数据库加载昨天的 后复权收盘价
+    '''
+
+    @staticmethod
+    def getAfterRehabilitationClosePrice():
+        if flagBeforeRehabilitationToAfterRehabilitaion == False:
+            date = Stock.getLastTradeDay()
+            Stock.yesterday_afterRehabilitationClosePrice = Stock.getDayAfterRehabilitationClosePrice(date)
+            flag_yesterday_afterRehabilitationClosePrice = True
+        return Stock.yesterday_afterRehabilitationClosePrice
+
+    '''
+    从数据库加载某一日的后复权收盘价
+    '''
+
+    @staticmethod
+    def getDayAfterRehabilitationClosePrice(date):
+        dic = {}
+        try:
+            dic = Stock.day_afterRehabilitationClosePrice[date]
+            return dic
+        except Exception, ex:
+            db = Stock.getDB("100")
+            ssql = "select A01,A06 from A where A00='%s'" % date
+            # print ssql
+            db.execute(ssql)
+            rs = db.fetchall()
+            if len(rs) > 0:
+                for (stock_code, close_price) in rs:
+                    dic[stock_code[0:6]] = close_price
+            Stock.day_afterRehabilitationClosePrice[date] = dic
+        return dic
+
+    '''
+    从数据库加载某一日的后复权开盘价
+    '''
+
+    @staticmethod
+    def getDayAfterRehabilitationOpenPrice(date):
+        dic = {}
+        try:
+            dic = Stock.day_afterRehabilitationOpenPrice[date]
+            return dic
+        except Exception, ex:
+            db = Stock.getDB("100")
+            ssql = "select A01,A03 from A where A00='%s'" % date
+            # print ssql
+            db.execute(ssql)
+            rs = db.fetchall()
+            if len(rs) > 0:
+                for (stock_code, open_price) in rs:
+                    dic[stock_code[0:6]] = open_price
+            Stock.day_afterRehabilitationOpenPrice[date] = dic
+        return dic
+
+    '''
+    从数据库加载某一日的前复权收盘价
+    '''
+
+    @staticmethod
+    def getDayBeforeRehabilitationClosePrice(date):
+        dic = {}
+        try:
+            dic = Stock.day_beforeRehabilitationClosePrice[date]
+        except Exception, ex:
+            print
+            ex
+            db = Stock.getDB("100")
+            db.execute("select STOCK_CODE,CLOSE from DFCF_RHQ where CAL_TIME='%s'" % date)
+            rs = db.fetchall()
+            if len(rs) > 0:
+                for (stock_code, close_price) in rs:
+                    dic[stock_code[0:6]] = close_price
+            Stock.day_beforeRehabilitationClosePrice[date] = dic
+        return dic
+
+    '''
+    从数据库加载某一日的前复权开盘价
+    '''
+
+    @staticmethod
+    def getDayBeforeRehabilitationOpenPrice(date):
+        dic = {}
+        try:
+            dic = Stock.day_beforeRehabilitationOpenPrice[date]
+        except Exception, ex:
+            print
+            ex
+            db = Stock.getDB("100")
+            db.execute("select STOCK_CODE,OPEN from DFCF_RHQ where CAL_TIME='%s'" % date)
+            rs = db.fetchall()
+            if len(rs) > 0:
+                for (stock_code, open_price) in rs:
+                    dic[stock_code[0:6]] = open_price
+            Stock.day_beforeRehabilitationOpenPrice[date] = dic
+        return dic
+
+    '''
+    从数据库加载某一日的前复权成交金额
+    '''
+
+    @staticmethod
+    def getDayBeforeRehabilitationAMT(date):
+        dic = {}
+        try:
+            dic = Stock.day_beforeRehabilitationAMTPrice[date]
+        except Exception, ex:
+            print
+            ex
+            db = Stock.getDB("100")
+            db.execute("select STOCK_CODE,AMT from DFCF_RHQ where CAL_TIME='%s'" % date)
+            rs = db.fetchall()
+            if len(rs) > 0:
+                for (stock_code, AMT) in rs:
+                    dic[stock_code[0:6]] = AMT
+            Stock.day_beforeRehabilitationAMTPrice[date] = dic
+        return dic
+
+    '''
+    从数据库加载某一日所有股票的流通股本数目
+    '''
+
+    @staticmethod
+    def getFloatStockOnDay(date):
+        dic = {}
+        try:
+            dic = Stock.day_floatStock[date]
+        except Exception, ex:
+            db = Stock.getDB("100")
+            db.execute("select E01,E03 from E where E00 = '%s'" % date)
+            rs = db.fetchall()
+            for (stock_code, fl_stock) in rs:
+                dic[stock_code[0:6]] = fl_stock
+            Stock.day_floatStock[date] = dic
+        return dic
+
+    '''
+    通过股票与现在的股票价格，获得实时的数据
+    '''
+
+    @staticmethod
+    def realtimeRehabilitaionPrice(code, now_price):
+        s_code = code[:6]
+        yesterday_rehabilitationClosePrice = Stock.getAfterRehabilitationClosePrice()
+        initValueDic = Stock.getTushareInitValue()
+        rbcp = 0.0
+        initValue = 0.0
+        try:
+            rbcp = yesterday_rehabilitationClosePrice[s_code]
+        except Exception, ex:
+            print
+            "Error in realtimeRehabilitaionPrice(%s,%s) " % (s_code, str(now_price))
+        try:
+            initValue = initValueDic[s_code]
+        except Exception, ex:
+            initValue = Stock.getInitValueFromDongFangCaiFu(s_code, now_price)
+        return MathFormula.getRealtimeRehabilitaion(now_price, initValue, rbcp)
+
+    '''
+    通过东方财富实时数据获得一天的initValue
+    '''
+
+    @staticmethod
+    def getInitValueFromDongFangCaiFu(code, now_price):
+        try:
+            dic = Stock.getStockRealTimeFromDongFangCaiFu(code[0:6])
+            initVal = MathFormula.getInitValue(dic["now_price"], dic["p_change"])
+            return initVal
+        except Exception, ex:
+            print
+            "Error in getInitValueFromDongFangCaiFu"
+            return -1.0
+
+    '''
+    通过东方财富Web端接口，获得实时的行情数据，里面有涨幅数据
+    '''
+
+    @staticmethod
+    def getStockRealTimeFromDongFangCaiFu(code):
+        try:
+            for i in range(1, 3):
+                url = "http://nufm.dfcfw.com/EM_Finance2014NumericApplication/JS.aspx?type=CT&cmd=" + code + str(
+                    i) + "&sty=FDFGBTB&st=z&sr=&p=&ps=&lvl=&cb=?&js=&token=5c46f660fab8722944521b8807de07c0&_=" + random.randint(
+                    10, 1000000)
+                data = HTML.get_html(url)
+                if len(data) > 20:
+                    ret = {}
+                    # ?(["002297,13,2,博云新材,15.14,0.15,1.00%,2015-11-20 15:00:00,154088,232559078,4.23%,-,2.40%,5514077754"])
+                    data = data[4:-3]
+                    arr = data.split(',')
+                    ret["code"] = arr[0]
+                    name = arr[3]
+                    try:
+                        name = name.decode('utf-8')
+                    except Exception, ex:
+                        print
+                        ex
+                    try:
+                        name = name.decode('gbk')
+                    except Exception, ex:
+                        print
+                        ex
+                    ret["name"] = name
+                    ret["now_price"] = arr[4]
+                    ret["price_change"] = arr[5]
+                    ret["p_change"] = (arr[6])[:-1]
+                    ret["date"] = arr[7]
+                    ret["volume"] = arr[8]
+                    ret["amount"] = arr[9]
+                    ret["turnover"] = arr[10]
+                    return ret
+            return {}
+        except Exception, ex:
+            print
+            ex
+            print
+            "Error in getStockRealTimeFromDongFangCaiFu"
+            return {}
+
+    '''
+    通过新浪Web接口，获得实时的行情数据， 里面没有涨幅数据
+    '''
+
+    @staticmethod
+    def getStockRealTimeFromSinaWeb(code):
+        try:
+            code = code[0:6]
+            belong = Stock.get_market(code)
+            sina_url = "http://hq.sinajs.cn/list="
+            data = urllib.urlopen(sina_url + belong + code).read()
+            tt = data.split(',')
+            if len(tt) < 1:
+                return ""
+            data = ','.join(tt[1:])
+            arr = tt[1:]
+            today_early_price = arr[0]
+            yesterday_end_price = arr[1]
+            now_price = arr[2]
+            today_high_price = arr[3]
+            today_low_price = arr[4]
+            volume = arr[7]
+            turn_volume = arr[8]
+            ret = {"now_price": now_price, "today_early_price": today_early_price, "today_high_price": today_high_price,
+                   "today_low_price": today_low_price, "volume": volume, "turn_volume": turn_volume}
+            return ret
+        except Exception, ex:
+            print
+            ex
+            print
+            "Error in Stock.getStockRealTimeFromSinaWeb"
+            return {}
+
+    '''
+    获得某只股票，某一天的收盘价
+    '''
+
+    @staticmethod
+    def getClosePrice(stock_code, date):
+        # print "getClosePrice , code : " + str(stock_code) + " date : " + str(date)
+        price = 0.0
+        try:
+            code = stock_code[0:6]
+            d = ts.get_hist_data(code, start=date, end=date)
+            # print d
+            price = d["close"][date]
+            # print price
+        except Exception, ex:
+            print
+            ex
+            flag = False
+        return float(price)
+
+    '''
+    获得某只股票，某天的未复权开盘价,以及是否能够买的到
+    '''
+
+    @staticmethod
+    def getOpenPriceOneStockOneDayAndCanBuy(stock_code, cal_time):
+        flag = False
+        price = 0.0
+        try:
+            code = stock_code[0:6]
+            d = ts.get_hist_data(code, start=cal_time, end=cal_time)
+            price = d["open"][cal_time]
+            price = float(price)
+            end_price = float(d["high"][cal_time])
+            if price != end_price:
+                flag = True
+        except Exception, ex:
+            print
+            ex
+            flag = False
+        return (price, flag)
+
+    '''
+    T12D0201
+    '''
+
+    @staticmethod
+    def loadStockBuyInfo(sd_id, cal_time, flag="buy"):
+        db = Stock.getDB("100")
+        sqll = "select * from (select LOAD_DATE from trade_rest_t11_real where LOAD_DATE > '%s' and SD_ID='%s' and action='%s'  order by LOAD_DATE asc) where rownum = 1" % (
+        cal_time, sd_id, flag)
+        db.execute(sqll)
+        rs = db.fetchall()
+        load_date = rs[0][0]
+        db.execute(
+            "select CODE,ACTION,LOAD_DATE,SD_ID from trade_rest_t11_real where sd_id = '%s' and LOAD_DATE = '%s' and action = '%s'" % (
+            sd_id, load_date, flag))
+        ret = []
+        rs = db.fetchall()
+        for (CODE, ACTION, LOAD_DATE, SD_ID) in rs:
+            ret.append((CODE, LOAD_DATE))
+        return ret

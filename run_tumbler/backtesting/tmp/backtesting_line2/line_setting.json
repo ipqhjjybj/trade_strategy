@@ -1,0 +1,13 @@
+{
+	"line_btc_usdt_binance":{
+		"class_name": "LineStrategy",
+		"setting":{
+			"symbol_pair": "btc_usdt",
+            "vt_symbols_subscribe": [
+                "btc_usdt.BINANCE"
+            ],
+			"line_rate":27,
+            "cut_rate":6
+		}
+	}
+}

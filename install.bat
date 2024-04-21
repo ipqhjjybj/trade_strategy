@@ -1,0 +1,1 @@
+python36 setup.py install

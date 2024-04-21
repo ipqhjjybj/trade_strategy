@@ -1,0 +1,13 @@
+{
+    "OKEX5": {
+        "api_key": "19600cfd-a550-4bfb-8514-1ac46a2e9490",
+        "secret_key": "68365CF02272754E3BB605D3BB62C26C",
+        "passphrase": "Shabi86458043.",
+        "proxy_host": "",
+        "proxy_port": 0,
+        "rest_market": 0,
+        "rest_trade": 1,
+        "ws_market": 1,
+        "ws_trade": 1
+    }
+}

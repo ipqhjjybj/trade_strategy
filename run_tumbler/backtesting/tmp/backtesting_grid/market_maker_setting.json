@@ -1,0 +1,38 @@
+{
+    "grid_maker_btc_usdt_binance": {
+        "class_name": "GridMakerV1Strategy",
+        "setting": {
+            "symbol_pair": "btc_usdt",
+            "vt_symbols_subscribe": [
+                "btc_usdt.BINANCE"
+            ],
+            "long_config": {
+                "run": true,
+                "start_volume": 0.1,
+                "inc_volume": 0.1,
+                "inc_spread": 0.6,
+                "put_order_num": 2,
+                "profit_spread": 0.6,
+                "avg_price": 0,
+                "now_position": 0,
+                "old_sell_orders": []
+            },
+            "short_config": {
+                "run": true,
+                "start_volume": 0.1,
+                "inc_volume": 0.1,
+                "inc_spread": 0.6,
+                "put_order_num": 2,
+                "profit_spread": 0.6,
+                "avg_price": 0,
+                "now_position": 0,
+                "old_buy_orders": []
+            },
+            "exchange_info": {
+                "exchange_name": "BINANCE",
+                "pos_target_symbol_percent_use": 90,
+                "pos_base_symbol_percent_use": 90
+            }
+        }
+    }
+}

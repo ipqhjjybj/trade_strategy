@@ -1,0 +1,67 @@
+{
+    "cs_v1_btc_usdt": {
+        "class_name": "CalendarSpreadV1Strategy",
+        "setting": {
+            "vt_symbols_subscribe": [
+                "bsv_usd_191220.OKEXF",
+                "bsv_usd_200327.OKEXF"
+            ],
+            "target_exchange_info": {
+                "vt_symbol": "bsv_usd_191220.OKEXF",
+                "symbol": "bsv_usd_191220",
+                "exchange": "OKEXF",
+                "price_tick": 0.0001,
+                "volume_tick": 1,
+                "contract_size": 10,
+                "delivery": "2019-12-06",
+                "account_key": "OKEXF.bsv"
+            },
+            "base_exchange_info": {
+                "vt_symbol": "bsv_usd_200327.OKEXF",
+                "symbol": "bsv_usd_200327",
+                "exchange": "OKEXF",
+                "price_tick": 0.0001,
+                "volume_tick": 1,
+                "contract_size": 10,
+                "delivery": "2019-12-06",
+                "account_key": "OKEXF.bsv"
+            },
+            "spread_down_list": [
+                {
+                    "spread": -5e-05,
+                    "percent": 0.1
+                },
+                {
+                    "spread": -0.0001,
+                    "percent": 0.1
+                },
+                {
+                    "spread": -0.00015,
+                    "percent": 0.1
+                },
+                {
+                    "spread": -0.0002,
+                    "percent": 0.1
+                }
+            ],
+            "spread_up_list": [
+                {
+                    "spread": 5e-05,
+                    "percent": 0.1
+                },
+                {
+                    "spread": 0.0001,
+                    "percent": 0.1
+                },
+                {
+                    "spread": 0.00015,
+                    "percent": 0.1
+                },
+                {
+                    "spread": 0.0002,
+                    "percent": 0.1
+                }
+            ]
+        }
+    }
+}

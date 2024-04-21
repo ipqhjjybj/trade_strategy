@@ -1,0 +1,698 @@
+2024-04-20 09:20:15,885  INFO: work_func, func:check_all_kline
+2024-04-20 09:20:15,885  INFO: [work_func] symbols:['btc_usdt']
+2024-04-20 09:20:15,885  INFO: symbols:['btc_usdt']
+2024-04-20 09:20:15,886  INFO: [recovery_k_line] symbol:btc_usdt period:1h
+2024-04-20 09:20:16,314  INFO: need recovery symbol:btc_usdt period:1h start:2018-06-26 10:00:00 end:2018-06-26 20:00:00
+2024-04-20 09:20:16,314  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2018-06-26 09:00:00 end_datetime:2018-06-26 20:00:00
+2024-04-20 09:20:16,315  Level 1530014400000: 1529974800000
+2024-04-20 09:20:16,315  INFO: [get_kline] from 2018-06-26 09:00:00~~2018-06-26 20:00:00 download BTCUSDT data
+2024-04-20 09:20:16,315  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1529974800000&endTime=1530014400000&limit=1000
+2024-04-20 09:20:16,790  Level 1530014400000: 1530014400000
+2024-04-20 09:20:16,790  INFO: [get_kline] from 2018-06-26 20:00:00~~2018-06-26 20:00:00 download BTCUSDT data
+2024-04-20 09:20:16,790  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1530014400000&endTime=1530014400000&limit=1000
+2024-04-20 09:20:17,236  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:17,236  INFO: [replace_bars] btc_usdt 1h 2018-06-26 09:00:00 2018-06-26 20:00:00 2
+2024-04-20 09:20:17,254  INFO: need recovery symbol:btc_usdt period:1h start:2018-06-27 21:00:00 end:2018-06-27 22:00:00
+2024-04-20 09:20:17,255  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2018-06-27 20:00:00 end_datetime:2018-06-27 22:00:00
+2024-04-20 09:20:17,255  Level 1530108000000: 1530100800000
+2024-04-20 09:20:17,255  INFO: [get_kline] from 2018-06-27 20:00:00~~2018-06-27 22:00:00 download BTCUSDT data
+2024-04-20 09:20:17,255  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1530100800000&endTime=1530108000000&limit=1000
+2024-04-20 09:20:17,706  Level 1530108000000: 1530108000000
+2024-04-20 09:20:17,707  INFO: [get_kline] from 2018-06-27 22:00:00~~2018-06-27 22:00:00 download BTCUSDT data
+2024-04-20 09:20:17,707  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1530108000000&endTime=1530108000000&limit=1000
+2024-04-20 09:20:18,201  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:18,201  INFO: [replace_bars] btc_usdt 1h 2018-06-27 20:00:00 2018-06-27 22:00:00 2
+2024-04-20 09:20:18,215  INFO: need recovery symbol:btc_usdt period:1h start:2018-07-04 09:00:00 end:2018-07-04 16:00:00
+2024-04-20 09:20:18,216  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2018-07-04 08:00:00 end_datetime:2018-07-04 16:00:00
+2024-04-20 09:20:18,216  Level 1530691200000: 1530662400000
+2024-04-20 09:20:18,216  INFO: [get_kline] from 2018-07-04 08:00:00~~2018-07-04 16:00:00 download BTCUSDT data
+2024-04-20 09:20:18,216  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1530662400000&endTime=1530691200000&limit=1000
+2024-04-20 09:20:18,674  Level 1530691200000: 1530691200000
+2024-04-20 09:20:18,674  INFO: [get_kline] from 2018-07-04 16:00:00~~2018-07-04 16:00:00 download BTCUSDT data
+2024-04-20 09:20:18,674  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1530691200000&endTime=1530691200000&limit=1000
+2024-04-20 09:20:19,120  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:19,120  INFO: [replace_bars] btc_usdt 1h 2018-07-04 08:00:00 2018-07-04 16:00:00 2
+2024-04-20 09:20:19,161  INFO: need recovery symbol:btc_usdt period:1h start:2018-10-19 14:00:00 end:2018-10-19 17:00:00
+2024-04-20 09:20:19,161  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2018-10-19 13:00:00 end_datetime:2018-10-19 17:00:00
+2024-04-20 09:20:19,161  Level 1539939600000: 1539925200000
+2024-04-20 09:20:19,161  INFO: [get_kline] from 2018-10-19 13:00:00~~2018-10-19 17:00:00 download BTCUSDT data
+2024-04-20 09:20:19,162  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1539925200000&endTime=1539939600000&limit=1000
+2024-04-20 09:20:19,615  Level 1539939600000: 1539939600000
+2024-04-20 09:20:19,616  INFO: [get_kline] from 2018-10-19 17:00:00~~2018-10-19 17:00:00 download BTCUSDT data
+2024-04-20 09:20:19,616  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1539939600000&endTime=1539939600000&limit=1000
+2024-04-20 09:20:20,108  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:20,108  INFO: [replace_bars] btc_usdt 1h 2018-10-19 13:00:00 2018-10-19 17:00:00 2
+2024-04-20 09:20:20,135  INFO: need recovery symbol:btc_usdt period:1h start:2018-11-14 10:00:00 end:2018-11-14 17:00:00
+2024-04-20 09:20:20,135  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2018-11-14 09:00:00 end_datetime:2018-11-14 17:00:00
+2024-04-20 09:20:20,135  Level 1542186000000: 1542157200000
+2024-04-20 09:20:20,135  INFO: [get_kline] from 2018-11-14 09:00:00~~2018-11-14 17:00:00 download BTCUSDT data
+2024-04-20 09:20:20,135  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1542157200000&endTime=1542186000000&limit=1000
+2024-04-20 09:20:20,661  Level 1542186000000: 1542186000000
+2024-04-20 09:20:20,661  INFO: [get_kline] from 2018-11-14 17:00:00~~2018-11-14 17:00:00 download BTCUSDT data
+2024-04-20 09:20:20,661  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1542186000000&endTime=1542186000000&limit=1000
+2024-04-20 09:20:21,122  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:21,123  INFO: [replace_bars] btc_usdt 1h 2018-11-14 09:00:00 2018-11-14 17:00:00 2
+2024-04-20 09:20:21,189  INFO: need recovery symbol:btc_usdt period:1h start:2019-03-12 10:00:00 end:2019-03-12 16:00:00
+2024-04-20 09:20:21,189  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2019-03-12 09:00:00 end_datetime:2019-03-12 16:00:00
+2024-04-20 09:20:21,190  Level 1552377600000: 1552352400000
+2024-04-20 09:20:21,190  INFO: [get_kline] from 2019-03-12 09:00:00~~2019-03-12 16:00:00 download BTCUSDT data
+2024-04-20 09:20:21,190  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1552352400000&endTime=1552377600000&limit=1000
+2024-04-20 09:20:21,693  Level 1552377600000: 1552377600000
+2024-04-20 09:20:21,694  INFO: [get_kline] from 2019-03-12 16:00:00~~2019-03-12 16:00:00 download BTCUSDT data
+2024-04-20 09:20:21,694  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1552377600000&endTime=1552377600000&limit=1000
+2024-04-20 09:20:22,199  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:22,200  INFO: [replace_bars] btc_usdt 1h 2019-03-12 09:00:00 2019-03-12 16:00:00 2
+2024-04-20 09:20:22,249  INFO: need recovery symbol:btc_usdt period:1h start:2019-05-15 11:00:00 end:2019-05-15 21:00:00
+2024-04-20 09:20:22,249  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2019-05-15 10:00:00 end_datetime:2019-05-15 21:00:00
+2024-04-20 09:20:22,249  Level 1557925200000: 1557885600000
+2024-04-20 09:20:22,249  INFO: [get_kline] from 2019-05-15 10:00:00~~2019-05-15 21:00:00 download BTCUSDT data
+2024-04-20 09:20:22,249  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1557885600000&endTime=1557925200000&limit=1000
+2024-04-20 09:20:23,190  Level 1557925200000: 1557925200000
+2024-04-20 09:20:23,190  INFO: [get_kline] from 2019-05-15 21:00:00~~2019-05-15 21:00:00 download BTCUSDT data
+2024-04-20 09:20:23,191  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1557925200000&endTime=1557925200000&limit=1000
+2024-04-20 09:20:25,367  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:25,368  INFO: [replace_bars] btc_usdt 1h 2019-05-15 10:00:00 2019-05-15 21:00:00 2
+2024-04-20 09:20:25,397  INFO: need recovery symbol:btc_usdt period:1h start:2019-08-15 10:00:00 end:2019-08-15 18:00:00
+2024-04-20 09:20:25,398  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2019-08-15 09:00:00 end_datetime:2019-08-15 18:00:00
+2024-04-20 09:20:25,398  Level 1565863200000: 1565830800000
+2024-04-20 09:20:25,398  INFO: [get_kline] from 2019-08-15 09:00:00~~2019-08-15 18:00:00 download BTCUSDT data
+2024-04-20 09:20:25,398  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1565830800000&endTime=1565863200000&limit=1000
+2024-04-20 09:20:25,857  Level 1565863200000: 1565863200000
+2024-04-20 09:20:25,857  INFO: [get_kline] from 2019-08-15 18:00:00~~2019-08-15 18:00:00 download BTCUSDT data
+2024-04-20 09:20:25,857  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1565863200000&endTime=1565863200000&limit=1000
+2024-04-20 09:20:26,353  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:26,353  INFO: [replace_bars] btc_usdt 1h 2019-08-15 09:00:00 2019-08-15 18:00:00 2
+2024-04-20 09:20:26,401  INFO: need recovery symbol:btc_usdt period:1h start:2019-11-13 10:00:00 end:2019-11-13 12:00:00
+2024-04-20 09:20:26,401  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2019-11-13 09:00:00 end_datetime:2019-11-13 12:00:00
+2024-04-20 09:20:26,401  Level 1573617600000: 1573606800000
+2024-04-20 09:20:26,401  INFO: [get_kline] from 2019-11-13 09:00:00~~2019-11-13 12:00:00 download BTCUSDT data
+2024-04-20 09:20:26,401  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1573606800000&endTime=1573617600000&limit=1000
+2024-04-20 09:20:26,923  Level 1573617600000: 1573617600000
+2024-04-20 09:20:26,924  INFO: [get_kline] from 2019-11-13 12:00:00~~2019-11-13 12:00:00 download BTCUSDT data
+2024-04-20 09:20:26,924  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1573617600000&endTime=1573617600000&limit=1000
+2024-04-20 09:20:27,396  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:27,396  INFO: [replace_bars] btc_usdt 1h 2019-11-13 09:00:00 2019-11-13 12:00:00 2
+2024-04-20 09:20:27,404  INFO: need recovery symbol:btc_usdt period:1h start:2019-11-25 10:00:00 end:2019-11-25 12:00:00
+2024-04-20 09:20:27,404  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2019-11-25 09:00:00 end_datetime:2019-11-25 12:00:00
+2024-04-20 09:20:27,404  Level 1574654400000: 1574643600000
+2024-04-20 09:20:27,404  INFO: [get_kline] from 2019-11-25 09:00:00~~2019-11-25 12:00:00 download BTCUSDT data
+2024-04-20 09:20:27,404  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1574643600000&endTime=1574654400000&limit=1000
+2024-04-20 09:20:27,934  Level 1574654400000: 1574654400000
+2024-04-20 09:20:27,935  INFO: [get_kline] from 2019-11-25 12:00:00~~2019-11-25 12:00:00 download BTCUSDT data
+2024-04-20 09:20:27,935  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1574654400000&endTime=1574654400000&limit=1000
+2024-04-20 09:20:28,464  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:28,465  INFO: [replace_bars] btc_usdt 1h 2019-11-25 09:00:00 2019-11-25 12:00:00 2
+2024-04-20 09:20:28,492  INFO: need recovery symbol:btc_usdt period:1h start:2020-02-09 10:00:00 end:2020-02-09 11:00:00
+2024-04-20 09:20:28,493  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2020-02-09 09:00:00 end_datetime:2020-02-09 11:00:00
+2024-04-20 09:20:28,493  Level 1581217200000: 1581210000000
+2024-04-20 09:20:28,493  INFO: [get_kline] from 2020-02-09 09:00:00~~2020-02-09 11:00:00 download BTCUSDT data
+2024-04-20 09:20:28,493  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1581210000000&endTime=1581217200000&limit=1000
+2024-04-20 09:20:28,947  Level 1581217200000: 1581217200000
+2024-04-20 09:20:28,948  INFO: [get_kline] from 2020-02-09 11:00:00~~2020-02-09 11:00:00 download BTCUSDT data
+2024-04-20 09:20:28,948  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1581217200000&endTime=1581217200000&limit=1000
+2024-04-20 09:20:29,398  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:29,399  INFO: [replace_bars] btc_usdt 1h 2020-02-09 09:00:00 2020-02-09 11:00:00 2
+2024-04-20 09:20:29,411  INFO: need recovery symbol:btc_usdt period:1h start:2020-02-19 20:00:00 end:2020-02-20 01:00:00
+2024-04-20 09:20:29,411  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2020-02-19 19:00:00 end_datetime:2020-02-20 01:00:00
+2024-04-20 09:20:29,412  Level 1582131600000: 1582110000000
+2024-04-20 09:20:29,412  INFO: [get_kline] from 2020-02-19 19:00:00~~2020-02-20 01:00:00 download BTCUSDT data
+2024-04-20 09:20:29,412  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1582110000000&endTime=1582131600000&limit=1000
+2024-04-20 09:20:29,899  Level 1582131600000: 1582131600000
+2024-04-20 09:20:29,899  INFO: [get_kline] from 2020-02-20 01:00:00~~2020-02-20 01:00:00 download BTCUSDT data
+2024-04-20 09:20:29,899  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1582131600000&endTime=1582131600000&limit=1000
+2024-04-20 09:20:30,429  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:30,429  INFO: [replace_bars] btc_usdt 1h 2020-02-19 19:00:00 2020-02-20 01:00:00 2
+2024-04-20 09:20:30,443  INFO: need recovery symbol:btc_usdt period:1h start:2020-03-04 18:00:00 end:2020-03-04 19:00:00
+2024-04-20 09:20:30,443  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2020-03-04 17:00:00 end_datetime:2020-03-04 19:00:00
+2024-04-20 09:20:30,443  Level 1583319600000: 1583312400000
+2024-04-20 09:20:30,443  INFO: [get_kline] from 2020-03-04 17:00:00~~2020-03-04 19:00:00 download BTCUSDT data
+2024-04-20 09:20:30,443  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1583312400000&endTime=1583319600000&limit=1000
+2024-04-20 09:20:30,945  Level 1583319600000: 1583319600000
+2024-04-20 09:20:30,945  INFO: [get_kline] from 2020-03-04 19:00:00~~2020-03-04 19:00:00 download BTCUSDT data
+2024-04-20 09:20:30,945  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1583319600000&endTime=1583319600000&limit=1000
+2024-04-20 09:20:31,428  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:31,429  INFO: [replace_bars] btc_usdt 1h 2020-03-04 17:00:00 2020-03-04 19:00:00 2
+2024-04-20 09:20:31,461  INFO: need recovery symbol:btc_usdt period:1h start:2020-04-25 10:00:00 end:2020-04-25 12:00:00
+2024-04-20 09:20:31,461  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2020-04-25 09:00:00 end_datetime:2020-04-25 12:00:00
+2024-04-20 09:20:31,461  Level 1587787200000: 1587776400000
+2024-04-20 09:20:31,461  INFO: [get_kline] from 2020-04-25 09:00:00~~2020-04-25 12:00:00 download BTCUSDT data
+2024-04-20 09:20:31,461  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1587776400000&endTime=1587787200000&limit=1000
+2024-04-20 09:20:31,927  Level 1587787200000: 1587787200000
+2024-04-20 09:20:31,927  INFO: [get_kline] from 2020-04-25 12:00:00~~2020-04-25 12:00:00 download BTCUSDT data
+2024-04-20 09:20:31,928  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1587787200000&endTime=1587787200000&limit=1000
+2024-04-20 09:20:32,415  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:32,416  INFO: [replace_bars] btc_usdt 1h 2020-04-25 09:00:00 2020-04-25 12:00:00 2
+2024-04-20 09:20:32,435  INFO: need recovery symbol:btc_usdt period:1h start:2020-06-28 10:00:00 end:2020-06-28 13:00:00
+2024-04-20 09:20:32,435  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2020-06-28 09:00:00 end_datetime:2020-06-28 13:00:00
+2024-04-20 09:20:32,435  Level 1593320400000: 1593306000000
+2024-04-20 09:20:32,435  INFO: [get_kline] from 2020-06-28 09:00:00~~2020-06-28 13:00:00 download BTCUSDT data
+2024-04-20 09:20:32,435  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1593306000000&endTime=1593320400000&limit=1000
+2024-04-20 09:20:32,896  Level 1593320400000: 1593320400000
+2024-04-20 09:20:32,896  INFO: [get_kline] from 2020-06-28 13:00:00~~2020-06-28 13:00:00 download BTCUSDT data
+2024-04-20 09:20:32,896  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1593320400000&endTime=1593320400000&limit=1000
+2024-04-20 09:20:33,385  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:33,386  INFO: [replace_bars] btc_usdt 1h 2020-06-28 09:00:00 2020-06-28 13:00:00 2
+2024-04-20 09:20:33,448  INFO: need recovery symbol:btc_usdt period:1h start:2020-11-30 14:00:00 end:2020-11-30 15:00:00
+2024-04-20 09:20:33,448  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2020-11-30 13:00:00 end_datetime:2020-11-30 15:00:00
+2024-04-20 09:20:33,448  Level 1606719600000: 1606712400000
+2024-04-20 09:20:33,448  INFO: [get_kline] from 2020-11-30 13:00:00~~2020-11-30 15:00:00 download BTCUSDT data
+2024-04-20 09:20:33,449  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1606712400000&endTime=1606719600000&limit=1000
+2024-04-20 09:20:33,909  Level 1606719600000: 1606719600000
+2024-04-20 09:20:33,910  INFO: [get_kline] from 2020-11-30 15:00:00~~2020-11-30 15:00:00 download BTCUSDT data
+2024-04-20 09:20:33,910  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1606719600000&endTime=1606719600000&limit=1000
+2024-04-20 09:20:34,351  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:34,352  INFO: [replace_bars] btc_usdt 1h 2020-11-30 13:00:00 2020-11-30 15:00:00 2
+2024-04-20 09:20:34,371  INFO: need recovery symbol:btc_usdt period:1h start:2020-12-21 22:00:00 end:2020-12-22 02:00:00
+2024-04-20 09:20:34,371  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2020-12-21 21:00:00 end_datetime:2020-12-22 02:00:00
+2024-04-20 09:20:34,371  Level 1608573600000: 1608555600000
+2024-04-20 09:20:34,371  INFO: [get_kline] from 2020-12-21 21:00:00~~2020-12-22 02:00:00 download BTCUSDT data
+2024-04-20 09:20:34,371  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1608555600000&endTime=1608573600000&limit=1000
+2024-04-20 09:20:34,888  Level 1608573600000: 1608573600000
+2024-04-20 09:20:34,888  INFO: [get_kline] from 2020-12-22 02:00:00~~2020-12-22 02:00:00 download BTCUSDT data
+2024-04-20 09:20:34,889  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1608573600000&endTime=1608573600000&limit=1000
+2024-04-20 09:20:35,344  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:35,344  INFO: [replace_bars] btc_usdt 1h 2020-12-21 21:00:00 2020-12-22 02:00:00 2
+2024-04-20 09:20:35,352  INFO: need recovery symbol:btc_usdt period:1h start:2020-12-25 10:00:00 end:2020-12-25 11:00:00
+2024-04-20 09:20:35,352  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2020-12-25 09:00:00 end_datetime:2020-12-25 11:00:00
+2024-04-20 09:20:35,352  Level 1608865200000: 1608858000000
+2024-04-20 09:20:35,352  INFO: [get_kline] from 2020-12-25 09:00:00~~2020-12-25 11:00:00 download BTCUSDT data
+2024-04-20 09:20:35,353  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1608858000000&endTime=1608865200000&limit=1000
+2024-04-20 09:20:35,844  Level 1608865200000: 1608865200000
+2024-04-20 09:20:35,844  INFO: [get_kline] from 2020-12-25 11:00:00~~2020-12-25 11:00:00 download BTCUSDT data
+2024-04-20 09:20:35,844  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1608865200000&endTime=1608865200000&limit=1000
+2024-04-20 09:20:36,319  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:36,320  INFO: [replace_bars] btc_usdt 1h 2020-12-25 09:00:00 2020-12-25 11:00:00 2
+2024-04-20 09:20:36,351  INFO: need recovery symbol:btc_usdt period:1h start:2021-02-11 12:00:00 end:2021-02-11 13:00:00
+2024-04-20 09:20:36,351  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2021-02-11 11:00:00 end_datetime:2021-02-11 13:00:00
+2024-04-20 09:20:36,351  Level 1613019600000: 1613012400000
+2024-04-20 09:20:36,351  INFO: [get_kline] from 2021-02-11 11:00:00~~2021-02-11 13:00:00 download BTCUSDT data
+2024-04-20 09:20:36,351  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1613012400000&endTime=1613019600000&limit=1000
+2024-04-20 09:20:36,900  Level 1613019600000: 1613019600000
+2024-04-20 09:20:36,901  INFO: [get_kline] from 2021-02-11 13:00:00~~2021-02-11 13:00:00 download BTCUSDT data
+2024-04-20 09:20:36,901  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1613019600000&endTime=1613019600000&limit=1000
+2024-04-20 09:20:37,395  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:37,396  INFO: [replace_bars] btc_usdt 1h 2021-02-11 11:00:00 2021-02-11 13:00:00 2
+2024-04-20 09:20:37,415  INFO: need recovery symbol:btc_usdt period:1h start:2021-03-06 10:00:00 end:2021-03-06 11:00:00
+2024-04-20 09:20:37,415  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2021-03-06 09:00:00 end_datetime:2021-03-06 11:00:00
+2024-04-20 09:20:37,415  Level 1614999600000: 1614992400000
+2024-04-20 09:20:37,416  INFO: [get_kline] from 2021-03-06 09:00:00~~2021-03-06 11:00:00 download BTCUSDT data
+2024-04-20 09:20:37,416  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1614992400000&endTime=1614999600000&limit=1000
+2024-04-20 09:20:37,894  Level 1614999600000: 1614999600000
+2024-04-20 09:20:37,894  INFO: [get_kline] from 2021-03-06 11:00:00~~2021-03-06 11:00:00 download BTCUSDT data
+2024-04-20 09:20:37,895  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1614999600000&endTime=1614999600000&limit=1000
+2024-04-20 09:20:38,354  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:38,354  INFO: [replace_bars] btc_usdt 1h 2021-03-06 09:00:00 2021-03-06 11:00:00 2
+2024-04-20 09:20:38,383  INFO: need recovery symbol:btc_usdt period:1h start:2021-04-20 10:00:00 end:2021-04-20 12:00:00
+2024-04-20 09:20:38,383  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2021-04-20 09:00:00 end_datetime:2021-04-20 12:00:00
+2024-04-20 09:20:38,384  Level 1618891200000: 1618880400000
+2024-04-20 09:20:38,384  INFO: [get_kline] from 2021-04-20 09:00:00~~2021-04-20 12:00:00 download BTCUSDT data
+2024-04-20 09:20:38,384  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1618880400000&endTime=1618891200000&limit=1000
+2024-04-20 09:20:38,866  Level 1618891200000: 1618891200000
+2024-04-20 09:20:38,866  INFO: [get_kline] from 2021-04-20 12:00:00~~2021-04-20 12:00:00 download BTCUSDT data
+2024-04-20 09:20:38,867  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1618891200000&endTime=1618891200000&limit=1000
+2024-04-20 09:20:39,346  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:39,347  INFO: [replace_bars] btc_usdt 1h 2021-04-20 09:00:00 2021-04-20 12:00:00 2
+2024-04-20 09:20:39,363  INFO: need recovery symbol:btc_usdt period:1h start:2021-04-25 13:00:00 end:2021-04-25 16:00:00
+2024-04-20 09:20:39,363  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2021-04-25 12:00:00 end_datetime:2021-04-25 16:00:00
+2024-04-20 09:20:39,364  Level 1619337600000: 1619323200000
+2024-04-20 09:20:39,364  INFO: [get_kline] from 2021-04-25 12:00:00~~2021-04-25 16:00:00 download BTCUSDT data
+2024-04-20 09:20:39,364  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1619323200000&endTime=1619337600000&limit=1000
+2024-04-20 09:20:39,848  Level 1619337600000: 1619337600000
+2024-04-20 09:20:39,848  INFO: [get_kline] from 2021-04-25 16:00:00~~2021-04-25 16:00:00 download BTCUSDT data
+2024-04-20 09:20:39,849  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1619337600000&endTime=1619337600000&limit=1000
+2024-04-20 09:20:40,316  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:40,316  INFO: [replace_bars] btc_usdt 1h 2021-04-25 12:00:00 2021-04-25 16:00:00 2
+2024-04-20 09:20:40,367  INFO: need recovery symbol:btc_usdt period:1h start:2021-08-13 10:00:00 end:2021-08-13 14:00:00
+2024-04-20 09:20:40,367  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2021-08-13 09:00:00 end_datetime:2021-08-13 14:00:00
+2024-04-20 09:20:40,367  Level 1628834400000: 1628816400000
+2024-04-20 09:20:40,367  INFO: [get_kline] from 2021-08-13 09:00:00~~2021-08-13 14:00:00 download BTCUSDT data
+2024-04-20 09:20:40,368  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1628816400000&endTime=1628834400000&limit=1000
+2024-04-20 09:20:40,861  Level 1628834400000: 1628834400000
+2024-04-20 09:20:40,862  INFO: [get_kline] from 2021-08-13 14:00:00~~2021-08-13 14:00:00 download BTCUSDT data
+2024-04-20 09:20:40,862  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1628834400000&endTime=1628834400000&limit=1000
+2024-04-20 09:20:41,361  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:41,361  INFO: [replace_bars] btc_usdt 1h 2021-08-13 09:00:00 2021-08-13 14:00:00 2
+2024-04-20 09:20:41,375  INFO: need recovery symbol:btc_usdt period:1h start:2021-09-29 15:00:00 end:2021-09-29 17:00:00
+2024-04-20 09:20:41,375  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2021-09-29 14:00:00 end_datetime:2021-09-29 17:00:00
+2024-04-20 09:20:41,375  Level 1632906000000: 1632895200000
+2024-04-20 09:20:41,375  INFO: [get_kline] from 2021-09-29 14:00:00~~2021-09-29 17:00:00 download BTCUSDT data
+2024-04-20 09:20:41,375  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1632895200000&endTime=1632906000000&limit=1000
+2024-04-20 09:20:41,857  Level 1632906000000: 1632906000000
+2024-04-20 09:20:41,857  INFO: [get_kline] from 2021-09-29 17:00:00~~2021-09-29 17:00:00 download BTCUSDT data
+2024-04-20 09:20:41,857  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1632906000000&endTime=1632906000000&limit=1000
+2024-04-20 09:20:42,314  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:42,314  INFO: [replace_bars] btc_usdt 1h 2021-09-29 14:00:00 2021-09-29 17:00:00 2
+2024-04-20 09:20:42,448  INFO: need recovery symbol:btc_usdt period:1h start:2023-03-24 21:00:00 end:2023-03-24 22:00:00
+2024-04-20 09:20:42,448  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2023-03-24 20:00:00 end_datetime:2023-03-24 22:00:00
+2024-04-20 09:20:42,448  Level 1679666400000: 1679659200000
+2024-04-20 09:20:42,448  INFO: [get_kline] from 2023-03-24 20:00:00~~2023-03-24 22:00:00 download BTCUSDT data
+2024-04-20 09:20:42,448  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1679659200000&endTime=1679666400000&limit=1000
+2024-04-20 09:20:42,905  Level 1679666400000: 1679666400000
+2024-04-20 09:20:42,906  INFO: [get_kline] from 2023-03-24 22:00:00~~2023-03-24 22:00:00 download BTCUSDT data
+2024-04-20 09:20:42,906  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1679666400000&endTime=1679666400000&limit=1000
+2024-04-20 09:20:43,402  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:43,403  INFO: [replace_bars] btc_usdt 1h 2023-03-24 20:00:00 2023-03-24 22:00:00 2
+2024-04-20 09:20:43,514  INFO: need recovery symbol:btc_usdt period:1h start:2024-04-19 22:00:00 end:2024-04-20 09:20:43.514806
+2024-04-20 09:20:43,514  INFO: [get_kline_to_mysql] symbol:btc_usdt period:1h  start_datetime:2024-04-19 22:00:00 end_datetime:2024-04-20 09:20:43.514806
+2024-04-20 09:20:43,515  Level 1713576043000: 1713535200000
+2024-04-20 09:20:43,515  INFO: [get_kline] from 2024-04-19 22:00:00~~2024-04-20 09:20:43 download BTCUSDT data
+2024-04-20 09:20:43,515  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1713535200000&endTime=1713576043000&limit=1000
+2024-04-20 09:20:44,012  Level 1713576043000: 1713574800000
+2024-04-20 09:20:44,012  INFO: [get_kline] from 2024-04-20 09:00:00~~2024-04-20 09:20:43 download BTCUSDT data
+2024-04-20 09:20:44,012  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BTCUSDT&interval=1h&startTime=1713574800000&endTime=1713576043000&limit=1000
+2024-04-20 09:20:44,470  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:20:44,471  INFO: [replace_bars] btc_usdt 1h 2024-04-19 22:00:00 2024-04-20 09:00:00 12
+2024-04-20 09:21:11,548  INFO: work_func, func:check_all_kline
+2024-04-20 09:21:11,548  INFO: [work_func] symbols:['eth_usdt']
+2024-04-20 09:21:11,548  INFO: symbols:['eth_usdt']
+2024-04-20 09:21:11,548  INFO: [recovery_k_line] symbol:eth_usdt period:1h
+2024-04-20 09:21:11,945  INFO: need recovery symbol:eth_usdt period:1h start:2018-06-26 10:00:00 end:2018-06-26 20:00:00
+2024-04-20 09:21:11,945  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2018-06-26 09:00:00 end_datetime:2018-06-26 20:00:00
+2024-04-20 09:21:11,945  Level 1530014400000: 1529974800000
+2024-04-20 09:21:11,945  INFO: [get_kline] from 2018-06-26 09:00:00~~2018-06-26 20:00:00 download ETHUSDT data
+2024-04-20 09:21:11,945  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1529974800000&endTime=1530014400000&limit=1000
+2024-04-20 09:21:12,440  Level 1530014400000: 1530014400000
+2024-04-20 09:21:12,441  INFO: [get_kline] from 2018-06-26 20:00:00~~2018-06-26 20:00:00 download ETHUSDT data
+2024-04-20 09:21:12,441  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1530014400000&endTime=1530014400000&limit=1000
+2024-04-20 09:21:12,917  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:12,917  INFO: [replace_bars] eth_usdt 1h 2018-06-26 09:00:00 2018-06-26 20:00:00 2
+2024-04-20 09:21:12,922  INFO: need recovery symbol:eth_usdt period:1h start:2018-06-27 21:00:00 end:2018-06-27 22:00:00
+2024-04-20 09:21:12,922  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2018-06-27 20:00:00 end_datetime:2018-06-27 22:00:00
+2024-04-20 09:21:12,922  Level 1530108000000: 1530100800000
+2024-04-20 09:21:12,922  INFO: [get_kline] from 2018-06-27 20:00:00~~2018-06-27 22:00:00 download ETHUSDT data
+2024-04-20 09:21:12,922  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1530100800000&endTime=1530108000000&limit=1000
+2024-04-20 09:21:13,442  Level 1530108000000: 1530108000000
+2024-04-20 09:21:13,442  INFO: [get_kline] from 2018-06-27 22:00:00~~2018-06-27 22:00:00 download ETHUSDT data
+2024-04-20 09:21:13,442  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1530108000000&endTime=1530108000000&limit=1000
+2024-04-20 09:21:13,943  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:13,944  INFO: [replace_bars] eth_usdt 1h 2018-06-27 20:00:00 2018-06-27 22:00:00 2
+2024-04-20 09:21:13,954  INFO: need recovery symbol:eth_usdt period:1h start:2018-07-04 09:00:00 end:2018-07-04 16:00:00
+2024-04-20 09:21:13,954  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2018-07-04 08:00:00 end_datetime:2018-07-04 16:00:00
+2024-04-20 09:21:13,955  Level 1530691200000: 1530662400000
+2024-04-20 09:21:13,955  INFO: [get_kline] from 2018-07-04 08:00:00~~2018-07-04 16:00:00 download ETHUSDT data
+2024-04-20 09:21:13,955  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1530662400000&endTime=1530691200000&limit=1000
+2024-04-20 09:21:14,449  Level 1530691200000: 1530691200000
+2024-04-20 09:21:14,449  INFO: [get_kline] from 2018-07-04 16:00:00~~2018-07-04 16:00:00 download ETHUSDT data
+2024-04-20 09:21:14,449  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1530691200000&endTime=1530691200000&limit=1000
+2024-04-20 09:21:14,957  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:14,957  INFO: [replace_bars] eth_usdt 1h 2018-07-04 08:00:00 2018-07-04 16:00:00 2
+2024-04-20 09:21:15,009  INFO: need recovery symbol:eth_usdt period:1h start:2018-10-19 14:00:00 end:2018-10-19 17:00:00
+2024-04-20 09:21:15,009  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2018-10-19 13:00:00 end_datetime:2018-10-19 17:00:00
+2024-04-20 09:21:15,010  Level 1539939600000: 1539925200000
+2024-04-20 09:21:15,010  INFO: [get_kline] from 2018-10-19 13:00:00~~2018-10-19 17:00:00 download ETHUSDT data
+2024-04-20 09:21:15,010  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1539925200000&endTime=1539939600000&limit=1000
+2024-04-20 09:21:15,528  Level 1539939600000: 1539939600000
+2024-04-20 09:21:15,529  INFO: [get_kline] from 2018-10-19 17:00:00~~2018-10-19 17:00:00 download ETHUSDT data
+2024-04-20 09:21:15,529  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1539939600000&endTime=1539939600000&limit=1000
+2024-04-20 09:21:16,022  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:16,023  INFO: [replace_bars] eth_usdt 1h 2018-10-19 13:00:00 2018-10-19 17:00:00 2
+2024-04-20 09:21:16,043  INFO: need recovery symbol:eth_usdt period:1h start:2018-11-14 10:00:00 end:2018-11-14 17:00:00
+2024-04-20 09:21:16,044  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2018-11-14 09:00:00 end_datetime:2018-11-14 17:00:00
+2024-04-20 09:21:16,044  Level 1542186000000: 1542157200000
+2024-04-20 09:21:16,044  INFO: [get_kline] from 2018-11-14 09:00:00~~2018-11-14 17:00:00 download ETHUSDT data
+2024-04-20 09:21:16,044  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1542157200000&endTime=1542186000000&limit=1000
+2024-04-20 09:21:16,571  Level 1542186000000: 1542186000000
+2024-04-20 09:21:16,571  INFO: [get_kline] from 2018-11-14 17:00:00~~2018-11-14 17:00:00 download ETHUSDT data
+2024-04-20 09:21:16,571  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1542186000000&endTime=1542186000000&limit=1000
+2024-04-20 09:21:17,069  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:17,069  INFO: [replace_bars] eth_usdt 1h 2018-11-14 09:00:00 2018-11-14 17:00:00 2
+2024-04-20 09:21:17,121  INFO: need recovery symbol:eth_usdt period:1h start:2019-03-12 10:00:00 end:2019-03-12 16:00:00
+2024-04-20 09:21:17,122  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2019-03-12 09:00:00 end_datetime:2019-03-12 16:00:00
+2024-04-20 09:21:17,122  Level 1552377600000: 1552352400000
+2024-04-20 09:21:17,122  INFO: [get_kline] from 2019-03-12 09:00:00~~2019-03-12 16:00:00 download ETHUSDT data
+2024-04-20 09:21:17,122  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1552352400000&endTime=1552377600000&limit=1000
+2024-04-20 09:21:17,623  Level 1552377600000: 1552377600000
+2024-04-20 09:21:17,623  INFO: [get_kline] from 2019-03-12 16:00:00~~2019-03-12 16:00:00 download ETHUSDT data
+2024-04-20 09:21:17,624  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1552377600000&endTime=1552377600000&limit=1000
+2024-04-20 09:21:18,144  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:18,145  INFO: [replace_bars] eth_usdt 1h 2019-03-12 09:00:00 2019-03-12 16:00:00 2
+2024-04-20 09:21:18,193  INFO: need recovery symbol:eth_usdt period:1h start:2019-05-15 11:00:00 end:2019-05-15 21:00:00
+2024-04-20 09:21:18,194  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2019-05-15 10:00:00 end_datetime:2019-05-15 21:00:00
+2024-04-20 09:21:18,194  Level 1557925200000: 1557885600000
+2024-04-20 09:21:18,194  INFO: [get_kline] from 2019-05-15 10:00:00~~2019-05-15 21:00:00 download ETHUSDT data
+2024-04-20 09:21:18,194  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1557885600000&endTime=1557925200000&limit=1000
+2024-04-20 09:21:18,837  Level 1557925200000: 1557925200000
+2024-04-20 09:21:18,837  INFO: [get_kline] from 2019-05-15 21:00:00~~2019-05-15 21:00:00 download ETHUSDT data
+2024-04-20 09:21:18,837  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1557925200000&endTime=1557925200000&limit=1000
+2024-04-20 09:21:19,300  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:19,301  INFO: [replace_bars] eth_usdt 1h 2019-05-15 10:00:00 2019-05-15 21:00:00 2
+2024-04-20 09:21:19,358  INFO: need recovery symbol:eth_usdt period:1h start:2019-08-15 10:00:00 end:2019-08-15 18:00:00
+2024-04-20 09:21:19,358  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2019-08-15 09:00:00 end_datetime:2019-08-15 18:00:00
+2024-04-20 09:21:19,358  Level 1565863200000: 1565830800000
+2024-04-20 09:21:19,358  INFO: [get_kline] from 2019-08-15 09:00:00~~2019-08-15 18:00:00 download ETHUSDT data
+2024-04-20 09:21:19,358  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1565830800000&endTime=1565863200000&limit=1000
+2024-04-20 09:21:19,842  Level 1565863200000: 1565863200000
+2024-04-20 09:21:19,843  INFO: [get_kline] from 2019-08-15 18:00:00~~2019-08-15 18:00:00 download ETHUSDT data
+2024-04-20 09:21:19,843  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1565863200000&endTime=1565863200000&limit=1000
+2024-04-20 09:21:20,310  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:20,310  INFO: [replace_bars] eth_usdt 1h 2019-08-15 09:00:00 2019-08-15 18:00:00 2
+2024-04-20 09:21:20,354  INFO: need recovery symbol:eth_usdt period:1h start:2019-11-13 10:00:00 end:2019-11-13 12:00:00
+2024-04-20 09:21:20,354  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2019-11-13 09:00:00 end_datetime:2019-11-13 12:00:00
+2024-04-20 09:21:20,354  Level 1573617600000: 1573606800000
+2024-04-20 09:21:20,354  INFO: [get_kline] from 2019-11-13 09:00:00~~2019-11-13 12:00:00 download ETHUSDT data
+2024-04-20 09:21:20,354  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1573606800000&endTime=1573617600000&limit=1000
+2024-04-20 09:21:20,858  Level 1573617600000: 1573617600000
+2024-04-20 09:21:20,858  INFO: [get_kline] from 2019-11-13 12:00:00~~2019-11-13 12:00:00 download ETHUSDT data
+2024-04-20 09:21:20,858  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1573617600000&endTime=1573617600000&limit=1000
+2024-04-20 09:21:21,336  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:21,336  INFO: [replace_bars] eth_usdt 1h 2019-11-13 09:00:00 2019-11-13 12:00:00 2
+2024-04-20 09:21:21,354  INFO: need recovery symbol:eth_usdt period:1h start:2019-11-25 10:00:00 end:2019-11-25 12:00:00
+2024-04-20 09:21:21,354  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2019-11-25 09:00:00 end_datetime:2019-11-25 12:00:00
+2024-04-20 09:21:21,354  Level 1574654400000: 1574643600000
+2024-04-20 09:21:21,354  INFO: [get_kline] from 2019-11-25 09:00:00~~2019-11-25 12:00:00 download ETHUSDT data
+2024-04-20 09:21:21,354  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1574643600000&endTime=1574654400000&limit=1000
+2024-04-20 09:21:21,835  Level 1574654400000: 1574654400000
+2024-04-20 09:21:21,835  INFO: [get_kline] from 2019-11-25 12:00:00~~2019-11-25 12:00:00 download ETHUSDT data
+2024-04-20 09:21:21,836  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1574654400000&endTime=1574654400000&limit=1000
+2024-04-20 09:21:22,332  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:22,333  INFO: [replace_bars] eth_usdt 1h 2019-11-25 09:00:00 2019-11-25 12:00:00 2
+2024-04-20 09:21:22,377  INFO: need recovery symbol:eth_usdt period:1h start:2020-02-09 10:00:00 end:2020-02-09 11:00:00
+2024-04-20 09:21:22,377  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2020-02-09 09:00:00 end_datetime:2020-02-09 11:00:00
+2024-04-20 09:21:22,377  Level 1581217200000: 1581210000000
+2024-04-20 09:21:22,377  INFO: [get_kline] from 2020-02-09 09:00:00~~2020-02-09 11:00:00 download ETHUSDT data
+2024-04-20 09:21:22,377  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1581210000000&endTime=1581217200000&limit=1000
+2024-04-20 09:21:22,839  Level 1581217200000: 1581217200000
+2024-04-20 09:21:22,840  INFO: [get_kline] from 2020-02-09 11:00:00~~2020-02-09 11:00:00 download ETHUSDT data
+2024-04-20 09:21:22,841  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1581217200000&endTime=1581217200000&limit=1000
+2024-04-20 09:21:23,361  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:23,361  INFO: [replace_bars] eth_usdt 1h 2020-02-09 09:00:00 2020-02-09 11:00:00 2
+2024-04-20 09:21:23,378  INFO: need recovery symbol:eth_usdt period:1h start:2020-02-19 20:00:00 end:2020-02-20 01:00:00
+2024-04-20 09:21:23,378  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2020-02-19 19:00:00 end_datetime:2020-02-20 01:00:00
+2024-04-20 09:21:23,378  Level 1582131600000: 1582110000000
+2024-04-20 09:21:23,379  INFO: [get_kline] from 2020-02-19 19:00:00~~2020-02-20 01:00:00 download ETHUSDT data
+2024-04-20 09:21:23,379  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1582110000000&endTime=1582131600000&limit=1000
+2024-04-20 09:21:23,908  Level 1582131600000: 1582131600000
+2024-04-20 09:21:23,909  INFO: [get_kline] from 2020-02-20 01:00:00~~2020-02-20 01:00:00 download ETHUSDT data
+2024-04-20 09:21:23,909  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1582131600000&endTime=1582131600000&limit=1000
+2024-04-20 09:21:24,399  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:24,400  INFO: [replace_bars] eth_usdt 1h 2020-02-19 19:00:00 2020-02-20 01:00:00 2
+2024-04-20 09:21:24,418  INFO: need recovery symbol:eth_usdt period:1h start:2020-03-04 18:00:00 end:2020-03-04 19:00:00
+2024-04-20 09:21:24,419  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2020-03-04 17:00:00 end_datetime:2020-03-04 19:00:00
+2024-04-20 09:21:24,419  Level 1583319600000: 1583312400000
+2024-04-20 09:21:24,419  INFO: [get_kline] from 2020-03-04 17:00:00~~2020-03-04 19:00:00 download ETHUSDT data
+2024-04-20 09:21:24,419  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1583312400000&endTime=1583319600000&limit=1000
+2024-04-20 09:21:25,302  Level 1583319600000: 1583319600000
+2024-04-20 09:21:25,302  INFO: [get_kline] from 2020-03-04 19:00:00~~2020-03-04 19:00:00 download ETHUSDT data
+2024-04-20 09:21:25,302  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1583319600000&endTime=1583319600000&limit=1000
+2024-04-20 09:21:25,799  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:25,799  INFO: [replace_bars] eth_usdt 1h 2020-03-04 17:00:00 2020-03-04 19:00:00 2
+2024-04-20 09:21:25,839  INFO: need recovery symbol:eth_usdt period:1h start:2020-04-25 10:00:00 end:2020-04-25 12:00:00
+2024-04-20 09:21:25,840  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2020-04-25 09:00:00 end_datetime:2020-04-25 12:00:00
+2024-04-20 09:21:25,840  Level 1587787200000: 1587776400000
+2024-04-20 09:21:25,840  INFO: [get_kline] from 2020-04-25 09:00:00~~2020-04-25 12:00:00 download ETHUSDT data
+2024-04-20 09:21:25,840  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1587776400000&endTime=1587787200000&limit=1000
+2024-04-20 09:21:26,356  Level 1587787200000: 1587787200000
+2024-04-20 09:21:26,356  INFO: [get_kline] from 2020-04-25 12:00:00~~2020-04-25 12:00:00 download ETHUSDT data
+2024-04-20 09:21:26,357  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1587787200000&endTime=1587787200000&limit=1000
+2024-04-20 09:21:26,861  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:26,863  INFO: [replace_bars] eth_usdt 1h 2020-04-25 09:00:00 2020-04-25 12:00:00 2
+2024-04-20 09:21:26,906  INFO: need recovery symbol:eth_usdt period:1h start:2020-06-28 10:00:00 end:2020-06-28 13:00:00
+2024-04-20 09:21:26,906  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2020-06-28 09:00:00 end_datetime:2020-06-28 13:00:00
+2024-04-20 09:21:26,906  Level 1593320400000: 1593306000000
+2024-04-20 09:21:26,906  INFO: [get_kline] from 2020-06-28 09:00:00~~2020-06-28 13:00:00 download ETHUSDT data
+2024-04-20 09:21:26,907  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1593306000000&endTime=1593320400000&limit=1000
+2024-04-20 09:21:27,439  Level 1593320400000: 1593320400000
+2024-04-20 09:21:27,439  INFO: [get_kline] from 2020-06-28 13:00:00~~2020-06-28 13:00:00 download ETHUSDT data
+2024-04-20 09:21:27,439  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1593320400000&endTime=1593320400000&limit=1000
+2024-04-20 09:21:27,898  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:27,898  INFO: [replace_bars] eth_usdt 1h 2020-06-28 09:00:00 2020-06-28 13:00:00 2
+2024-04-20 09:21:27,979  INFO: need recovery symbol:eth_usdt period:1h start:2020-11-30 14:00:00 end:2020-11-30 15:00:00
+2024-04-20 09:21:27,979  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2020-11-30 13:00:00 end_datetime:2020-11-30 15:00:00
+2024-04-20 09:21:27,979  Level 1606719600000: 1606712400000
+2024-04-20 09:21:27,979  INFO: [get_kline] from 2020-11-30 13:00:00~~2020-11-30 15:00:00 download ETHUSDT data
+2024-04-20 09:21:27,979  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1606712400000&endTime=1606719600000&limit=1000
+2024-04-20 09:21:29,008  Level 1606719600000: 1606719600000
+2024-04-20 09:21:29,009  INFO: [get_kline] from 2020-11-30 15:00:00~~2020-11-30 15:00:00 download ETHUSDT data
+2024-04-20 09:21:29,009  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1606719600000&endTime=1606719600000&limit=1000
+2024-04-20 09:21:31,168  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:31,169  INFO: [replace_bars] eth_usdt 1h 2020-11-30 13:00:00 2020-11-30 15:00:00 2
+2024-04-20 09:21:31,184  INFO: need recovery symbol:eth_usdt period:1h start:2020-12-21 22:00:00 end:2020-12-22 02:00:00
+2024-04-20 09:21:31,184  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2020-12-21 21:00:00 end_datetime:2020-12-22 02:00:00
+2024-04-20 09:21:31,185  Level 1608573600000: 1608555600000
+2024-04-20 09:21:31,185  INFO: [get_kline] from 2020-12-21 21:00:00~~2020-12-22 02:00:00 download ETHUSDT data
+2024-04-20 09:21:31,185  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1608555600000&endTime=1608573600000&limit=1000
+2024-04-20 09:21:31,642  Level 1608573600000: 1608573600000
+2024-04-20 09:21:31,643  INFO: [get_kline] from 2020-12-22 02:00:00~~2020-12-22 02:00:00 download ETHUSDT data
+2024-04-20 09:21:31,643  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1608573600000&endTime=1608573600000&limit=1000
+2024-04-20 09:21:32,101  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:32,101  INFO: [replace_bars] eth_usdt 1h 2020-12-21 21:00:00 2020-12-22 02:00:00 2
+2024-04-20 09:21:32,109  INFO: need recovery symbol:eth_usdt period:1h start:2020-12-25 10:00:00 end:2020-12-25 11:00:00
+2024-04-20 09:21:32,110  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2020-12-25 09:00:00 end_datetime:2020-12-25 11:00:00
+2024-04-20 09:21:32,110  Level 1608865200000: 1608858000000
+2024-04-20 09:21:32,110  INFO: [get_kline] from 2020-12-25 09:00:00~~2020-12-25 11:00:00 download ETHUSDT data
+2024-04-20 09:21:32,110  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1608858000000&endTime=1608865200000&limit=1000
+2024-04-20 09:21:32,592  Level 1608865200000: 1608865200000
+2024-04-20 09:21:32,592  INFO: [get_kline] from 2020-12-25 11:00:00~~2020-12-25 11:00:00 download ETHUSDT data
+2024-04-20 09:21:32,593  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1608865200000&endTime=1608865200000&limit=1000
+2024-04-20 09:21:33,043  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:33,044  INFO: [replace_bars] eth_usdt 1h 2020-12-25 09:00:00 2020-12-25 11:00:00 2
+2024-04-20 09:21:33,073  INFO: need recovery symbol:eth_usdt period:1h start:2021-02-11 12:00:00 end:2021-02-11 13:00:00
+2024-04-20 09:21:33,074  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2021-02-11 11:00:00 end_datetime:2021-02-11 13:00:00
+2024-04-20 09:21:33,074  Level 1613019600000: 1613012400000
+2024-04-20 09:21:33,074  INFO: [get_kline] from 2021-02-11 11:00:00~~2021-02-11 13:00:00 download ETHUSDT data
+2024-04-20 09:21:33,074  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1613012400000&endTime=1613019600000&limit=1000
+2024-04-20 09:21:33,592  Level 1613019600000: 1613019600000
+2024-04-20 09:21:33,593  INFO: [get_kline] from 2021-02-11 13:00:00~~2021-02-11 13:00:00 download ETHUSDT data
+2024-04-20 09:21:33,593  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1613019600000&endTime=1613019600000&limit=1000
+2024-04-20 09:21:34,044  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:34,044  INFO: [replace_bars] eth_usdt 1h 2021-02-11 11:00:00 2021-02-11 13:00:00 2
+2024-04-20 09:21:34,062  INFO: need recovery symbol:eth_usdt period:1h start:2021-03-06 10:00:00 end:2021-03-06 11:00:00
+2024-04-20 09:21:34,063  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2021-03-06 09:00:00 end_datetime:2021-03-06 11:00:00
+2024-04-20 09:21:34,063  Level 1614999600000: 1614992400000
+2024-04-20 09:21:34,063  INFO: [get_kline] from 2021-03-06 09:00:00~~2021-03-06 11:00:00 download ETHUSDT data
+2024-04-20 09:21:34,063  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1614992400000&endTime=1614999600000&limit=1000
+2024-04-20 09:21:34,515  Level 1614999600000: 1614999600000
+2024-04-20 09:21:34,515  INFO: [get_kline] from 2021-03-06 11:00:00~~2021-03-06 11:00:00 download ETHUSDT data
+2024-04-20 09:21:34,515  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1614999600000&endTime=1614999600000&limit=1000
+2024-04-20 09:21:35,025  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:35,026  INFO: [replace_bars] eth_usdt 1h 2021-03-06 09:00:00 2021-03-06 11:00:00 2
+2024-04-20 09:21:35,055  INFO: need recovery symbol:eth_usdt period:1h start:2021-04-20 10:00:00 end:2021-04-20 12:00:00
+2024-04-20 09:21:35,055  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2021-04-20 09:00:00 end_datetime:2021-04-20 12:00:00
+2024-04-20 09:21:35,055  Level 1618891200000: 1618880400000
+2024-04-20 09:21:35,055  INFO: [get_kline] from 2021-04-20 09:00:00~~2021-04-20 12:00:00 download ETHUSDT data
+2024-04-20 09:21:35,055  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1618880400000&endTime=1618891200000&limit=1000
+2024-04-20 09:21:35,536  Level 1618891200000: 1618891200000
+2024-04-20 09:21:35,536  INFO: [get_kline] from 2021-04-20 12:00:00~~2021-04-20 12:00:00 download ETHUSDT data
+2024-04-20 09:21:35,536  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1618891200000&endTime=1618891200000&limit=1000
+2024-04-20 09:21:36,046  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:36,047  INFO: [replace_bars] eth_usdt 1h 2021-04-20 09:00:00 2021-04-20 12:00:00 2
+2024-04-20 09:21:36,055  INFO: need recovery symbol:eth_usdt period:1h start:2021-04-25 13:00:00 end:2021-04-25 16:00:00
+2024-04-20 09:21:36,056  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2021-04-25 12:00:00 end_datetime:2021-04-25 16:00:00
+2024-04-20 09:21:36,056  Level 1619337600000: 1619323200000
+2024-04-20 09:21:36,056  INFO: [get_kline] from 2021-04-25 12:00:00~~2021-04-25 16:00:00 download ETHUSDT data
+2024-04-20 09:21:36,056  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1619323200000&endTime=1619337600000&limit=1000
+2024-04-20 09:21:36,515  Level 1619337600000: 1619337600000
+2024-04-20 09:21:36,516  INFO: [get_kline] from 2021-04-25 16:00:00~~2021-04-25 16:00:00 download ETHUSDT data
+2024-04-20 09:21:36,516  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1619337600000&endTime=1619337600000&limit=1000
+2024-04-20 09:21:37,001  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:37,002  INFO: [replace_bars] eth_usdt 1h 2021-04-25 12:00:00 2021-04-25 16:00:00 2
+2024-04-20 09:21:37,053  INFO: need recovery symbol:eth_usdt period:1h start:2021-08-13 10:00:00 end:2021-08-13 14:00:00
+2024-04-20 09:21:37,053  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2021-08-13 09:00:00 end_datetime:2021-08-13 14:00:00
+2024-04-20 09:21:37,053  Level 1628834400000: 1628816400000
+2024-04-20 09:21:37,053  INFO: [get_kline] from 2021-08-13 09:00:00~~2021-08-13 14:00:00 download ETHUSDT data
+2024-04-20 09:21:37,053  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1628816400000&endTime=1628834400000&limit=1000
+2024-04-20 09:21:37,503  Level 1628834400000: 1628834400000
+2024-04-20 09:21:37,503  INFO: [get_kline] from 2021-08-13 14:00:00~~2021-08-13 14:00:00 download ETHUSDT data
+2024-04-20 09:21:37,504  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1628834400000&endTime=1628834400000&limit=1000
+2024-04-20 09:21:37,994  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:37,995  INFO: [replace_bars] eth_usdt 1h 2021-08-13 09:00:00 2021-08-13 14:00:00 2
+2024-04-20 09:21:38,025  INFO: need recovery symbol:eth_usdt period:1h start:2021-09-29 15:00:00 end:2021-09-29 17:00:00
+2024-04-20 09:21:38,025  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2021-09-29 14:00:00 end_datetime:2021-09-29 17:00:00
+2024-04-20 09:21:38,026  Level 1632906000000: 1632895200000
+2024-04-20 09:21:38,026  INFO: [get_kline] from 2021-09-29 14:00:00~~2021-09-29 17:00:00 download ETHUSDT data
+2024-04-20 09:21:38,026  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1632895200000&endTime=1632906000000&limit=1000
+2024-04-20 09:21:38,514  Level 1632906000000: 1632906000000
+2024-04-20 09:21:38,514  INFO: [get_kline] from 2021-09-29 17:00:00~~2021-09-29 17:00:00 download ETHUSDT data
+2024-04-20 09:21:38,514  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1632906000000&endTime=1632906000000&limit=1000
+2024-04-20 09:21:39,006  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:39,007  INFO: [replace_bars] eth_usdt 1h 2021-09-29 14:00:00 2021-09-29 17:00:00 2
+2024-04-20 09:21:39,142  INFO: need recovery symbol:eth_usdt period:1h start:2023-03-24 21:00:00 end:2023-03-24 22:00:00
+2024-04-20 09:21:39,142  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2023-03-24 20:00:00 end_datetime:2023-03-24 22:00:00
+2024-04-20 09:21:39,142  Level 1679666400000: 1679659200000
+2024-04-20 09:21:39,142  INFO: [get_kline] from 2023-03-24 20:00:00~~2023-03-24 22:00:00 download ETHUSDT data
+2024-04-20 09:21:39,142  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1679659200000&endTime=1679666400000&limit=1000
+2024-04-20 09:21:39,654  Level 1679666400000: 1679666400000
+2024-04-20 09:21:39,655  INFO: [get_kline] from 2023-03-24 22:00:00~~2023-03-24 22:00:00 download ETHUSDT data
+2024-04-20 09:21:39,655  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1679666400000&endTime=1679666400000&limit=1000
+2024-04-20 09:21:40,145  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:40,145  INFO: [replace_bars] eth_usdt 1h 2023-03-24 20:00:00 2023-03-24 22:00:00 2
+2024-04-20 09:21:40,256  INFO: need recovery symbol:eth_usdt period:1h start:2024-04-19 13:00:00 end:2024-04-20 09:21:40.256083
+2024-04-20 09:21:40,256  INFO: [get_kline_to_mysql] symbol:eth_usdt period:1h  start_datetime:2024-04-19 13:00:00 end_datetime:2024-04-20 09:21:40.256083
+2024-04-20 09:21:40,256  Level 1713576100000: 1713502800000
+2024-04-20 09:21:40,256  INFO: [get_kline] from 2024-04-19 13:00:00~~2024-04-20 09:21:40 download ETHUSDT data
+2024-04-20 09:21:40,256  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1713502800000&endTime=1713576100000&limit=1000
+2024-04-20 09:21:40,715  Level 1713576100000: 1713574800000
+2024-04-20 09:21:40,716  INFO: [get_kline] from 2024-04-20 09:00:00~~2024-04-20 09:21:40 download ETHUSDT data
+2024-04-20 09:21:40,716  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=ETHUSDT&interval=1h&startTime=1713574800000&endTime=1713576100000&limit=1000
+2024-04-20 09:21:41,212  INFO: [get_kline] DownloadData Finished!
+2024-04-20 09:21:41,213  INFO: [replace_bars] eth_usdt 1h 2024-04-19 13:00:00 2024-04-20 09:00:00 21
+2024-04-20 20:34:31,199  INFO: work_func, func:check_all_kline
+2024-04-20 20:34:31,199  INFO: [work_func] symbols:['sol_usdt']
+2024-04-20 20:34:31,199  INFO: symbols:['sol_usdt']
+2024-04-20 20:34:31,199  INFO: [recovery_k_line] symbol:sol_usdt period:1h
+2024-04-20 20:34:31,539  INFO: [get_kline_to_mysql] symbol:sol_usdt period:1h  start_datetime:2021-07-01 00:00:00 end_datetime:2024-04-20 20:34:31.199078
+2024-04-20 20:34:31,540  Level 1713616471000: 1625068800000
+2024-04-20 20:34:31,540  INFO: [get_kline] from 2021-07-01 00:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:31,540  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1625068800000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:32,320  Level 1713616471000: 1628665200000
+2024-04-20 20:34:32,321  INFO: [get_kline] from 2021-08-11 15:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:32,321  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1628665200000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:33,208  Level 1713616471000: 1632276000000
+2024-04-20 20:34:33,208  INFO: [get_kline] from 2021-09-22 10:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:33,208  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1632276000000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:33,799  Level 1713616471000: 1635879600000
+2024-04-20 20:34:33,799  INFO: [get_kline] from 2021-11-03 03:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:33,799  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1635879600000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:34,294  Level 1713616471000: 1639476000000
+2024-04-20 20:34:34,294  INFO: [get_kline] from 2021-12-14 18:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:34,294  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1639476000000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:35,128  Level 1713616471000: 1643072400000
+2024-04-20 20:34:35,129  INFO: [get_kline] from 2022-01-25 09:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:35,129  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1643072400000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:35,980  Level 1713616471000: 1646668800000
+2024-04-20 20:34:35,980  INFO: [get_kline] from 2022-03-08 00:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:35,980  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1646668800000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:36,558  Level 1713616471000: 1650265200000
+2024-04-20 20:34:36,558  INFO: [get_kline] from 2022-04-18 15:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:36,558  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1650265200000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:37,152  Level 1713616471000: 1653861600000
+2024-04-20 20:34:37,152  INFO: [get_kline] from 2022-05-30 06:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:37,152  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1653861600000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:37,615  Level 1713616471000: 1657458000000
+2024-04-20 20:34:37,615  INFO: [get_kline] from 2022-07-10 21:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:37,616  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1657458000000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:38,128  Level 1713616471000: 1661054400000
+2024-04-20 20:34:38,129  INFO: [get_kline] from 2022-08-21 12:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:38,129  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1661054400000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:38,686  Level 1713616471000: 1664650800000
+2024-04-20 20:34:38,687  INFO: [get_kline] from 2022-10-02 03:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:38,687  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1664650800000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:40,968  Level 1713616471000: 1668247200000
+2024-04-20 20:34:40,970  INFO: [get_kline] from 2022-11-12 18:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:40,970  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1668247200000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:41,775  Level 1713616471000: 1671843600000
+2024-04-20 20:34:41,776  INFO: [get_kline] from 2022-12-24 09:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:41,776  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1671843600000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:42,501  Level 1713616471000: 1675440000000
+2024-04-20 20:34:42,502  INFO: [get_kline] from 2023-02-04 00:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:42,502  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1675440000000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:42,995  Level 1713616471000: 1679036400000
+2024-04-20 20:34:42,996  INFO: [get_kline] from 2023-03-17 15:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:42,996  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1679036400000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:43,729  Level 1713616471000: 1682636400000
+2024-04-20 20:34:43,730  INFO: [get_kline] from 2023-04-28 07:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:43,730  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1682636400000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:45,386  Level 1713616471000: 1686232800000
+2024-04-20 20:34:45,387  INFO: [get_kline] from 2023-06-08 22:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:45,387  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1686232800000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:45,862  Level 1713616471000: 1689829200000
+2024-04-20 20:34:45,862  INFO: [get_kline] from 2023-07-20 13:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:45,863  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1689829200000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:46,563  Level 1713616471000: 1693425600000
+2024-04-20 20:34:46,564  INFO: [get_kline] from 2023-08-31 04:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:46,565  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1693425600000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:47,000  Level 1713616471000: 1697022000000
+2024-04-20 20:34:47,001  INFO: [get_kline] from 2023-10-11 19:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:47,001  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1697022000000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:47,516  Level 1713616471000: 1700618400000
+2024-04-20 20:34:47,517  INFO: [get_kline] from 2023-11-22 10:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:47,517  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1700618400000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:48,247  Level 1713616471000: 1704214800000
+2024-04-20 20:34:48,248  INFO: [get_kline] from 2024-01-03 01:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:48,248  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1704214800000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:49,727  Level 1713616471000: 1707811200000
+2024-04-20 20:34:49,728  INFO: [get_kline] from 2024-02-13 16:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:49,728  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1707811200000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:51,324  Level 1713616471000: 1711407600000
+2024-04-20 20:34:51,324  INFO: [get_kline] from 2024-03-26 07:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:51,324  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1711407600000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:51,741  Level 1713616471000: 1713614400000
+2024-04-20 20:34:51,742  INFO: [get_kline] from 2024-04-20 20:00:00~~2024-04-20 20:34:31 download SOLUSDT data
+2024-04-20 20:34:51,742  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=SOLUSDT&interval=1h&startTime=1713614400000&endTime=1713616471000&limit=1000
+2024-04-20 20:34:53,102  INFO: [get_kline] DownloadData Finished!
+2024-04-20 20:34:53,249  INFO: [replace_bars] sol_usdt 1h 2021-07-01 00:00:00 2024-04-20 20:00:00 24590
+2024-04-20 20:35:51,382  INFO: work_func, func:check_all_kline
+2024-04-20 20:35:51,383  INFO: [work_func] symbols:['bnb_usdt']
+2024-04-20 20:35:51,383  INFO: symbols:['bnb_usdt']
+2024-04-20 20:35:51,383  INFO: [recovery_k_line] symbol:bnb_usdt period:1h
+2024-04-20 20:35:51,703  INFO: [get_kline_to_mysql] symbol:bnb_usdt period:1h  start_datetime:2021-07-01 00:00:00 end_datetime:2024-04-20 20:35:51.382780
+2024-04-20 20:35:51,703  Level 1713616551000: 1625068800000
+2024-04-20 20:35:51,704  INFO: [get_kline] from 2021-07-01 00:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:35:51,704  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1625068800000&endTime=1713616551000&limit=1000
+2024-04-20 20:35:52,455  Level 1713616551000: 1628665200000
+2024-04-20 20:35:52,456  INFO: [get_kline] from 2021-08-11 15:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:35:52,456  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1628665200000&endTime=1713616551000&limit=1000
+2024-04-20 20:35:53,189  Level 1713616551000: 1632276000000
+2024-04-20 20:35:53,189  INFO: [get_kline] from 2021-09-22 10:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:35:53,189  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1632276000000&endTime=1713616551000&limit=1000
+2024-04-20 20:35:53,666  Level 1713616551000: 1635879600000
+2024-04-20 20:35:53,667  INFO: [get_kline] from 2021-11-03 03:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:35:53,667  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1635879600000&endTime=1713616551000&limit=1000
+2024-04-20 20:35:54,151  Level 1713616551000: 1639476000000
+2024-04-20 20:35:54,151  INFO: [get_kline] from 2021-12-14 18:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:35:54,151  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1639476000000&endTime=1713616551000&limit=1000
+2024-04-20 20:35:54,619  Level 1713616551000: 1643072400000
+2024-04-20 20:35:54,620  INFO: [get_kline] from 2022-01-25 09:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:35:54,620  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1643072400000&endTime=1713616551000&limit=1000
+2024-04-20 20:35:55,112  Level 1713616551000: 1646668800000
+2024-04-20 20:35:55,113  INFO: [get_kline] from 2022-03-08 00:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:35:55,113  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1646668800000&endTime=1713616551000&limit=1000
+2024-04-20 20:35:55,585  Level 1713616551000: 1650265200000
+2024-04-20 20:35:55,586  INFO: [get_kline] from 2022-04-18 15:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:35:55,586  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1650265200000&endTime=1713616551000&limit=1000
+2024-04-20 20:35:56,090  Level 1713616551000: 1653861600000
+2024-04-20 20:35:56,091  INFO: [get_kline] from 2022-05-30 06:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:35:56,091  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1653861600000&endTime=1713616551000&limit=1000
+2024-04-20 20:35:57,030  Level 1713616551000: 1657458000000
+2024-04-20 20:35:57,030  INFO: [get_kline] from 2022-07-10 21:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:35:57,031  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1657458000000&endTime=1713616551000&limit=1000
+2024-04-20 20:35:57,509  Level 1713616551000: 1661054400000
+2024-04-20 20:35:57,510  INFO: [get_kline] from 2022-08-21 12:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:35:57,510  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1661054400000&endTime=1713616551000&limit=1000
+2024-04-20 20:35:57,975  Level 1713616551000: 1664650800000
+2024-04-20 20:35:57,975  INFO: [get_kline] from 2022-10-02 03:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:35:57,976  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1664650800000&endTime=1713616551000&limit=1000
+2024-04-20 20:35:58,499  Level 1713616551000: 1668247200000
+2024-04-20 20:35:58,500  INFO: [get_kline] from 2022-11-12 18:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:35:58,500  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1668247200000&endTime=1713616551000&limit=1000
+2024-04-20 20:35:58,974  Level 1713616551000: 1671843600000
+2024-04-20 20:35:58,975  INFO: [get_kline] from 2022-12-24 09:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:35:58,975  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1671843600000&endTime=1713616551000&limit=1000
+2024-04-20 20:35:59,749  Level 1713616551000: 1675440000000
+2024-04-20 20:35:59,750  INFO: [get_kline] from 2023-02-04 00:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:35:59,750  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1675440000000&endTime=1713616551000&limit=1000
+2024-04-20 20:36:00,532  Level 1713616551000: 1679036400000
+2024-04-20 20:36:00,532  INFO: [get_kline] from 2023-03-17 15:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:36:00,532  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1679036400000&endTime=1713616551000&limit=1000
+2024-04-20 20:36:01,137  Level 1713616551000: 1682636400000
+2024-04-20 20:36:01,137  INFO: [get_kline] from 2023-04-28 07:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:36:01,137  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1682636400000&endTime=1713616551000&limit=1000
+2024-04-20 20:36:02,028  Level 1713616551000: 1686232800000
+2024-04-20 20:36:02,028  INFO: [get_kline] from 2023-06-08 22:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:36:02,028  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1686232800000&endTime=1713616551000&limit=1000
+2024-04-20 20:36:02,893  Level 1713616551000: 1689829200000
+2024-04-20 20:36:02,893  INFO: [get_kline] from 2023-07-20 13:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:36:02,894  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1689829200000&endTime=1713616551000&limit=1000
+2024-04-20 20:36:03,696  Level 1713616551000: 1693425600000
+2024-04-20 20:36:03,697  INFO: [get_kline] from 2023-08-31 04:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:36:03,697  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1693425600000&endTime=1713616551000&limit=1000
+2024-04-20 20:36:04,553  Level 1713616551000: 1697022000000
+2024-04-20 20:36:04,553  INFO: [get_kline] from 2023-10-11 19:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:36:04,553  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1697022000000&endTime=1713616551000&limit=1000
+2024-04-20 20:36:05,236  Level 1713616551000: 1700618400000
+2024-04-20 20:36:05,237  INFO: [get_kline] from 2023-11-22 10:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:36:05,238  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1700618400000&endTime=1713616551000&limit=1000
+2024-04-20 20:36:05,794  Level 1713616551000: 1704214800000
+2024-04-20 20:36:05,794  INFO: [get_kline] from 2024-01-03 01:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:36:05,794  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1704214800000&endTime=1713616551000&limit=1000
+2024-04-20 20:36:06,548  Level 1713616551000: 1707811200000
+2024-04-20 20:36:06,548  INFO: [get_kline] from 2024-02-13 16:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:36:06,549  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1707811200000&endTime=1713616551000&limit=1000
+2024-04-20 20:36:07,490  Level 1713616551000: 1711407600000
+2024-04-20 20:36:07,490  INFO: [get_kline] from 2024-03-26 07:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:36:07,490  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1711407600000&endTime=1713616551000&limit=1000
+2024-04-20 20:36:08,076  Level 1713616551000: 1713614400000
+2024-04-20 20:36:08,077  INFO: [get_kline] from 2024-04-20 20:00:00~~2024-04-20 20:35:51 download BNBUSDT data
+2024-04-20 20:36:08,077  INFO: [make_request] url:https://www.binance.com/api/v3/klines/symbol=BNBUSDT&interval=1h&startTime=1713614400000&endTime=1713616551000&limit=1000
+2024-04-20 20:36:08,517  INFO: [get_kline] DownloadData Finished!
+2024-04-20 20:36:08,664  INFO: [replace_bars] bnb_usdt 1h 2021-07-01 00:00:00 2024-04-20 20:00:00 24590

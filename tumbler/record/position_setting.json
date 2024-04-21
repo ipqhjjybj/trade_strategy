@@ -1,0 +1,11 @@
+[
+	{
+		"people":"mov",
+		"assets":["btc","usdt","btm","eth"],
+		"accounts":[
+			{"key_name":"mov_huobi","exchange":"HUOBI","api_key":"2ff1f125-ht4tgq1e4t-ff5c6bdc-72e54","secret_key":"3e126fd5-f59720ec-0ac39963-387ec"},
+			{"key_name":"mov1_mov","exchange":"MOV","api_key":"01537daa-44c3-4643-912d-45ee550de076","secret_key":"606e13f04b791c3f1019437781751fa585da66d94d3d7709a8e326ef321f165f47a08426f821bd54668b3eea5eefab45b2124ca75466c777004f7a5de56e70ff"}
+		],
+		"email_list":["250657661@qq.com"]
+	}
+]
