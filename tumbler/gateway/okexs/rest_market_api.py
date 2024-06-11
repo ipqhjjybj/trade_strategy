@@ -31,7 +31,7 @@ class OkexsRestMarketApi(RestClient):
         self.gateway_name = gateway.gateway_name
 
         self.ticks = {}
-        self.host = "https://www.okex.com"
+        self.host = "https://www.okx.com"
         self.all_symbols_set = set([])
 
         self.loop_interval = None
@@ -53,7 +53,7 @@ class OkexsRestMarketApi(RestClient):
 
             time.sleep(self.loop_interval)
 
-    def connect(self, key, secret, passphrase, url="https://www.okex.com", proxy_host="", proxy_port=0):
+    def connect(self, key, secret, passphrase, url="https://www.okx.com", proxy_host="", proxy_port=0):
         self.host, _ = split_url(url)
         self.init(url, proxy_host, proxy_port)
         self.start()

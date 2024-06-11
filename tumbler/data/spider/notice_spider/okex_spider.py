@@ -3,7 +3,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-ret = requests.get("https://www.okex.com/support/hc/zh-cn/categories/115000275131")
+ret = requests.get("https://www.okx.com/support/hc/zh-cn/categories/115000275131")
 soup = BeautifulSoup(ret.text, 'html.parser')
 
 article_names = ["最新公告", "最新活动", "冲提公告", "法币公告", "币币/杠杆公告", "合约公告", "OKEX云", "矿池公告"]

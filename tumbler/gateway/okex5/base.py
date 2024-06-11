@@ -10,8 +10,8 @@ from tumbler.constant import Exchange, Product, Direction, OrderType
 from tumbler.function import get_str_dt_use_timestamp
 from tumbler.function import get_vt_key, get_dt_use_timestamp
 
-REST_MARKET_HOST = "https://www.okex.com"
-REST_TRADE_HOST = "https://www.okex.com"
+REST_MARKET_HOST = "https://www.okx.com"
+REST_TRADE_HOST = "https://www.okx.com"
 WEBSOCKET_PUBLIC_HOST = "wss://ws.okx.com:8443/ws/v5/public"  # Market Data
 WEBSOCKET_PRIVATE_HOST = "wss://ws.okx.com:8443/ws/v5/private"  # Account and Order
 

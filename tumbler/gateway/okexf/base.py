@@ -14,12 +14,12 @@ from tumbler.function import get_vt_key, parse_timestamp_get_str
 from tumbler.constant import DiffTypeFuture
 
 
-REST_MARKET_HOST = "https://www.okex.com"
-REST_TRADE_HOST = "https://www.okex.com"
+REST_MARKET_HOST = "https://www.okx.com"
+REST_TRADE_HOST = "https://www.okx.com"
 WEBSOCKET_MARKET_HOST = "wss://real.okex.com:8443/ws/v3"  # Market Data
 WEBSOCKET_TRADE_HOST = "wss://real.okex.com:8443/ws/v3"  # Account and Order
 
-OKEXF_REST_HOST = "https://www.okex.com"
+OKEXF_REST_HOST = "https://www.okx.com"
 OKEXF_WEBSOCKET_HOST = "wss://real.okex.com:8443/ws/v3"
 
 STATUS_OKEXF2VT = {

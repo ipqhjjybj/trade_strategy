@@ -100,7 +100,7 @@ class NoticeSpider(object):
                     ],
                     [
                         Exchange.OKEX.value,
-                        "https://www.okex.com/support/hc/zh-cn/categories/115000275131",
+                        "https://www.okx.com/support/hc/zh-cn/categories/115000275131",
                         ["最新公告", "最新活动", "冲提公告", "法币公告", "币币/杠杆公告", "合约公告", "OKEX云", "矿池公告"],
                         self.okex_func
                     ],
