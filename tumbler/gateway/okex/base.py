@@ -19,8 +19,8 @@ from tumbler.object import AccountData, OrderData, ContractData
 
 REST_MARKET_HOST = "https://www.okx.com"
 REST_TRADE_HOST = "https://www.okx.com"
-WEBSOCKET_MARKET_HOST = "wss://real.okex.com:8443/ws/v3"  # Market Data
-WEBSOCKET_TRADE_HOST = "wss://real.okex.com:8443/ws/v3"  # Account and Order
+WEBSOCKET_MARKET_HOST = "wss://real.okx.com:8443/ws/v3"  # Market Data
+WEBSOCKET_TRADE_HOST = "wss://real.okx.com:8443/ws/v3"  # Account and Order
 
 STATUS_OKEX2VT = {
     "ordering": Status.SUBMITTING.value,

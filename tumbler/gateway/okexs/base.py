@@ -19,11 +19,11 @@ from tumbler.object import (
 
 REST_MARKET_HOST = "https://www.okx.com"
 REST_TRADE_HOST = "https://www.okx.com"
-WEBSOCKET_MARKET_HOST = "wss://real.okex.com:8443/ws/v3"  # Market Data
-WEBSOCKET_TRADE_HOST = "wss://real.okex.com:8443/ws/v3"  # Account and Order
+WEBSOCKET_MARKET_HOST = "wss://real.okx.com:8443/ws/v3"  # Market Data
+WEBSOCKET_TRADE_HOST = "wss://real.okx.com:8443/ws/v3"  # Account and Order
 
 OKEXS_REST_HOST = "https://www.okx.com"
-OKEXS_WEBSOCKET_HOST = "wss://real.okex.com:8443/ws/v3"
+OKEXS_WEBSOCKET_HOST = "wss://real.okx.com:8443/ws/v3"
 
 STATUS_OKEXS2VT = {
     "0": Status.NOTTRADED.value,
