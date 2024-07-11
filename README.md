@@ -2,6 +2,7 @@
 
 ---------------------------------------------------------------------------------
 
+sudo pip3 install -r requirements2.txt
 sudo python3 setup.py install
 
 
