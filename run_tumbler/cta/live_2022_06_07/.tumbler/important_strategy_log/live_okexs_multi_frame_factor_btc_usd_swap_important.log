@@ -1,8 +1,0 @@
-2024-04-20 11:04:23,812  INFO: [on_order info] vt_order_id:a24042011040410001.OKEX5, order.status:PARTTRADED,info:btc_usd_swap.OKEX5,SHORT,63802.0,11.0,1.0
-
-2024-04-20 11:04:23,812  INFO: [on_trade info] trade:btc_usd_swap.OKEX5,a24042011040410001,SHORT,1.0
-
-2024-04-20 11:04:23,813  INFO: [on_order info] vt_order_id:a24042011040410001.OKEX5, order.status:ALLTRADED,info:btc_usd_swap.OKEX5,SHORT,63802.0,11.0,11.0
-
-2024-04-20 11:04:23,813  INFO: [on_trade info] trade:btc_usd_swap.OKEX5,a24042011040410001,SHORT,10.0
-
