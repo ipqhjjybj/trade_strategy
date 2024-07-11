@@ -33,7 +33,7 @@ SETTINGS = {
     "mongodb_host": "127.0.0.1",
     "mongodb_port": 27017,
     "mongodb_user": "root",
-    "mongodb_password": "8btc-quant.now",
+    "mongodb_password": "123456",
     "mongodb_authentication_source": "admin",
 
     #####################################
@@ -42,7 +42,7 @@ SETTINGS = {
     "mysql_host": "127.0.0.1",
     "mysql_port": 3306,
     "mysql_user": "root",
-    "mysql_password": "Shabi86458043.",
+    "mysql_password": "",
 
     #####################################
     # log config
